@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="300px">
+    <g>
+        <!-- REFERECE: L - absolute(to point), l - relative(move to)-->
+
+        <!-- basic path: move, line, close; H/V: straight line-->
+        <path stroke="#fff24e" fill="transparent" stroke-width="4" transform="scale(2)" d="
+    M0,0
+    L0,100 100,100 100,0 Z"/>
+
+        <!-- arc: radius/size, rotation, flags(large, flip), endpoint -->
+        <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
+    M30,30
+    a10,10 0 0,1 0,80"/>
+
+        <!-- quadric bezier: anchor, endpoint -->
+        <!-- shorthand -->
+        <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
+    M80,30
+    q60,20 0,80
+    t0,160"/>
+
+        <!-- qubic bezier: anchor*a, anchor*b, endpoint-->
+        <!-- shorthand -->
+        <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
+    M120,30
+    c-60,40 60,40 0,80
+    s60,40 0,80"/>
+
+        <!-- other ease of access elements -->
+        <rect x="160" y="30" width="100" height="100" rx="5" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+        <circle cx="210" cy="80" r="30" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+        <ellipse cx="210" cy="80" rx="30" ry="15" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+        <line x1="180" y1="40" x2="240" y2="40" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+        <polyline points="195,140 200,150 205,140 210,130 215,140" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+        <polygon points="220,140 225,150 230,140 235,130 240,140" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+    </g>
+</svg>

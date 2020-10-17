@@ -1,0 +1,61 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 150,
+  "contributorsPerLine": 5,
+  "skipCi": true,
+  "projectName": "Frontend-Boilerplates",
+  "projectOwner": "CKGrafico",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "contributors": [
+    {
+      "login": "ckgrafico",
+      "name": "Quique Fdez Guerra",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2048511?v=4",
+      "profile": "http://CKgrafico.com",
+      "contributions": [
+        "platform",
+        "code",
+        "tool"
+      ]
+    },
+    {
+      "login": "spertusatti",
+      "name": "Sabrina Pertusatti",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/25738279?v=4",
+      "profile": "https://github.com/spertusatti",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "VGamezz19",
+      "name": "Víctor Gámez",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/14943217?v=4",
+      "profile": "https://www.linkedin.com/in/victor-gamez/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "AlexKryzh",
+      "name": "Alex Kryzhanovskyy",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2675648?v=4",
+      "profile": "http://kryzh.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jcarloslr10",
+      "name": "Juan Carlos",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15978818?v=4",
+      "profile": "https://github.com/jcarloslr10",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
