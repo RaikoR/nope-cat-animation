@@ -20,7 +20,7 @@ module.exports = (env) => {
     module: {
       rules: [...rules.files, rules.scripts, rules.styles]
     },
-    plugins: [plugins.html, plugins.images, plugins.extractStyles],
+    plugins: [plugins.html, plugins.svg, plugins.images, plugins.extractStyles],
     devServer: {
       open: true,
       port: 4000,

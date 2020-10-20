@@ -14,7 +14,20 @@ module.exports = (env) => {
       ]
     },
     {
+      test: /svg\/+?\.svg$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            emitFile: false
+          }
+        }
+      ]
+    },
+    {
       test: /\.(woff(2)?|ttf|eot|svg)$/,
+      exclude: /svg\//,
       use: [
         {
           loader: 'file-loader',
