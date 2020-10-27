@@ -1,0 +1,6 @@
+blinking (semirandom (1-2 weighted 0.2) delayed(3-7))
+mosue follow (!deadzone, no crossed eyes)
+outflow (fixed, continious)
+tounge lick/nose curl (boop the snoot)
+suprise eyes
+ALLIANCE (fade)

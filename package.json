@@ -20,6 +20,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "bootstrap": "^4.5.0",
+    "extra-watch-webpack-plugin": "^1.0.3",
     "jquery": "3.5.1"
   },
   "devDependencies": {

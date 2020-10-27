@@ -1,4 +1,5 @@
 import './vendor';
-import $ from 'jquery';
 
-console.log($);
+import Guide from '~/components/guide';
+
+new Guide();

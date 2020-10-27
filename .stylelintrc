@@ -16,7 +16,7 @@
     "indentation": 2,
     "string-quotes": "single",
     "no-duplicate-selectors": true,
-    "color-hex-case": "upper",
+    "color-hex-case": "lower",
     "color-hex-length": "long",
     "color-named": "never",
     "selector-no-qualifying-type": true,
