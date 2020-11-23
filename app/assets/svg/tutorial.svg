@@ -1,37 +1,52 @@
- <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="300px">
-    <g>
-        <!-- REFERECE: L - absolute(to point), l - relative(move to)-->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    <g id="tut-element">
+      <!-- REFERECE: L - absolute(draw to point), l - relative(drwa amount)-->
 
-        <!-- basic path: move, line, close; H/V: straight line-->
-        <path stroke="#fff24e" fill="transparent" stroke-width="4" d="
-    M0,0
-    L0,300 300,300 300,0 Z"/>
-
-        <!-- arc: radius/size, rotation, flags(large, flip), endpoint -->
-        <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
-    M30,30
-    a10,10 0 0,1 10,80"/>
-
-        <!-- quadric bezier: anchor, endpoint -->
-        <!-- shorthand  -->
-        <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
-    M80,30
-    q60,20 0,80
-    t0,160"/>
-
-        <!-- qubic bezier: anchor*a, anchor*b, endpoint-->
-        <!-- shorthand -->
-        <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
-    M120,30
-    c-60,40 60,40 0,80
-    s60,40 0,80"/>
-
-        <!-- other ease of access elements -->
-        <rect x="160" y="30" width="100" height="100" rx="5" stroke="#0000ff" fill="transparent" stroke-width="2"/>
-        <circle cx="210" cy="80" r="30" stroke="#0000ff" fill="transparent" stroke-width="2"/>
-        <ellipse cx="210" cy="80" rx="30" ry="15" stroke="#0000ff" fill="transparent" stroke-width="2"/>
-        <line x1="180" y1="40" x2="240" y2="40" stroke="#0000ff" fill="transparent" stroke-width="2"/>
-        <polyline points="195,140 200,150 205,140 210,130 215,140" stroke="#0000ff" fill="transparent" stroke-width="2"/>
-        <polygon points="220,140 225,150 230,140 235,130 240,140" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+      <!-- other ease of access elements -->
+      <rect x="10" y="2" width="10" height="10" rx="3" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+      <circle cx="29" cy="7" r="5" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+      <ellipse cx="42" cy="7" rx="3" ry="5" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+      <line x1="50" y1="2" x2="57" y2="12" stroke="#0000ff" fill="transparent" stroke-width="2"/>
     </g>
+
+    <g id="tut-polyline">
+      <polyline points="12,7 15,12 20,2 23,7" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+      <polygon points="32,7 35,12 40,2 43,7" stroke="#0000ff" fill="transparent" stroke-width="2"/>
+    </g>
+
+    <g id="tut-path">
+      <!-- basic path: move, line, close; H/V: straight line-->
+      <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
+    M10,7 h10,0
+    M25,2 v0,10
+    M30,12
+    l10,-10 0,10 Z"/>
+    </g>
+
+    <g id="tut-arc">
+      <!-- arc: radius/size, rotation, flags(large, flip), endpoint -->
+      <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
+        M10,12
+        a20,20 0 0,1 20,10"/>
+    </g>
+
+    <g id="tut-quad-path">
+      <!-- quadric bezier: anchor, endpoint -->
+      <!-- shorthand follow  -->
+      <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
+    M10,12
+    q10,-10 20,0
+    t10,0"/>
+    </g>
+
+    <g id="tut-cube-path">
+      <!-- cubic bezier: anchor*a, anchor*b, endpoint-->
+      <!-- shorthand -->
+      <path stroke="#0000ff" fill="transparent" stroke-width="2" d="
+    M10,12
+    c10,-10 10,10 15,0
+    s10,10 15,0"/>
+    </g>
+  </defs>
 </svg>

@@ -34,4 +34,40 @@
   .active & {
     transform: translate(0, 0);
   }
+
+  .guide--tutorial & {
+    padding-top: 48px;
+  }
+}
+
+.tutorial {
+  display: flex;
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.tutorial__svg {
+  display: none;
+}
+
+.tutorial__rows {
+  flex: 0 1 auto;
+
+  & + & {
+    padding-left: 24px;
+  }
+}
+
+.tutorial__row {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+
+  & + & {
+    margin-top: 12px;
+  }
+}
+
+.tutorial__title {
+  font-weight: bold;
 }

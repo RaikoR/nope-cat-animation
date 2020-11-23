@@ -18,7 +18,7 @@ module.exports = (env) => {
       filename: '[name].js'
     },
     module: {
-      rules: [...rules.files, rules.scripts, rules.styles]
+      rules: [rules.html, ...rules.files, rules.scripts, rules.styles]
     },
     plugins: [plugins.watcher, plugins.html, plugins.svg, plugins.images, plugins.extractStyles],
     devServer: {
