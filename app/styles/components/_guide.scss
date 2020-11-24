@@ -1,73 +1,148 @@
 .guide {
-  position: relative;
-  display: flex;
-  flex-flow: row;
-  height: 0;
-  overflow: visible;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    height: 0;
+    overflow: visible;
 }
 
 .guide-board {
-  & + & {
-    margin-left: 12px;
-  }
+    & + & {
+        margin-left: 12px;
+    }
 }
 
 .guide-button {
-  position: relative;
-  padding: 0 4px;
-  border: 0;
-  background-color: $fill-med;
-  border-radius: 3px;
-  z-index: 10;
+    position: relative;
+    padding: 0 4px;
+    border: 0;
+    background-color: $fill-med;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.guide-grid-button {
+    padding: 2px 6px;
+    border: 0;
+    background: $fill-dark;
+    border-radius: 3px;
+    cursor: pointer;
+
+    & + & {
+        margin-left: 6px;
+    }
+
+    &.is-active {
+        background: $fill-med;
+    }
 }
 
 .guide-item {
-  position: absolute;
-  background: $highlight;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transform: translate(-100%, 0);
-  transition: transform .3s;
-
-  .active & {
-    transform: translate(0, 0);
-  }
-
-  .guide--tutorial & {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translate(-100%, 0);
+    transition: transform .3s;
     padding-top: 48px;
-  }
+
+    .active & {
+        transform: translate(0, 0);
+    }
 }
 
 .tutorial {
-  display: flex;
-  font-size: 14px;
-  font-family: monospace;
+    display: flex;
+    font-size: 14px;
+    font-family: monospace;
+    background: $highlight;
 }
 
 .tutorial__svg {
-  display: none;
+    display: none;
 }
 
 .tutorial__rows {
-  flex: 0 1 auto;
+    flex: 0 1 auto;
 
-  & + & {
-    padding-left: 24px;
-  }
+    & + & {
+        padding-left: 24px;
+    }
 }
 
 .tutorial__row {
-  display: flex;
-  align-items: center;
-  margin: 4px 0;
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
 
-  & + & {
-    margin-top: 12px;
-  }
+    & + & {
+        margin-top: 12px;
+    }
 }
 
 .tutorial__title {
-  font-weight: bold;
+    font-weight: 700;
+}
+
+.overlay {
+    svg {
+        display: block;
+    }
+}
+
+.guide__overlay {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 100%;
+    background-position: 0;
+    pointer-events: none;
+
+    &.has-grid {
+        background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px);
+    }
+
+    &.has-hd-grid {
+        background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+            repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
+            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px);
+    }
+}
+
+.guide__overlay-controls {
+    position: relative;
+    z-index: 10;
+}
+
+.guide__zoombox {
+    display: none;
+    position: absolute;
+    width: 201px;
+    height: 201px;
+    background-image: url('/images/Nope-kass-Stroke.svg');
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    &.has-grid {
+        background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+            url('/images/Nope-kass-Stroke.svg');
+    }
+
+    &.has-hd-grid {
+        background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+            repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
+            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
+            url('/images/Nope-kass-Stroke.svg');
+    }
+
+    .show-zoom & {
+        display: block;
+    }
 }

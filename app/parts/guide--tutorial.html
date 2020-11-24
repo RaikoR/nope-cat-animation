@@ -1,136 +1,139 @@
 <div class="guide-board guide--tutorial">
-  <img src="app/assets/svg/tutorial.svg" class="tutorial__svg"/>
-  <button class="guide-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="40px">
-      <path class="s-dark" stroke="#000000" fill="transparent" stroke-width="2" stroke-linecap="round" d="M4,20 Q30,0 30,20T56,20"/>
-    </svg>
-  </button>
-  <div class="guide-item tutorial">
-    <div class="tutorial__rows">
-      <div class="tutorial__row">
-        <span class="tutorial__title">Path element[d]:</span>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__image">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="15px">
-            <use href="#tut-path"></use>
-          </svg>
-        </div>
-        <div class="tutorial__text">
-          <span class="tutorial__title">lines:</span><br>
-          vertical: &nbsp;&nbsp;<strong>v</strong><span style="color: deepskyblue">[x,y]</span><br>
-          horizontal: <strong>h</strong><span style="color: deepskyblue">[x,y]</span><br>
-          line: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>l</strong><span style="color: magenta">[x,y]</span>
-          <span style="color: deepskyblue">[x,y]</span><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <span style="color: magenta">start</span>
-          <span style="color: deepskyblue">end</span>
-        </div>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__image">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="25px">
-            <use href="#tut-arc"></use>
-          </svg>
-        </div>
-        <div class="tutorial__text">
-          <span class="tutorial__title">arc:</span><br>
-          <strong>a</strong><span style="color: magenta">[rx,ry]</span>
-          <span style="color: deepskyblue">[bool]</span>
-          <span style="color: limegreen">[bool,bool]</span>
-          <span style="color: orange">[x,y]</span><br>
+    <img src="app/assets/svg/tutorial.svg" class="tutorial__svg"/>
+    <button class="guide-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="40px">
+            <path class="s-dark" stroke="#000000" fill="transparent" stroke-width="2" stroke-linecap="round" d="M4,20 Q30,0 30,20T56,20"/>
+        </svg>
+    </button>
+    <div class="guide-item tutorial">
+        <div class="tutorial__rows">
+            <div class="tutorial__row">
+                <div class="tutorial__text">
+                    <span class="tutorial__title">Path element[d]:</span>
+                    &lt;path d=""&gt;
+                </div>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="15px">
+                        <use href="#tut-path"></use>
+                    </svg>
+                </div>
+                <div class="tutorial__text">
+                    <span class="tutorial__title">lines:</span><br>
+                    vertical: &nbsp;&nbsp;<strong>v</strong><span style="color: deepskyblue">[x,y]</span><br>
+                    horizontal: <strong>h</strong><span style="color: deepskyblue">[x,y]</span><br>
+                    line: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>l</strong><span style="color: magenta">[x,y]</span>
+                    <span style="color: deepskyblue">[x,y]</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style="color: magenta">start</span>
+                    <span style="color: deepskyblue">end</span>
+                </div>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="25px">
+                        <use href="#tut-arc"></use>
+                    </svg>
+                </div>
+                <div class="tutorial__text">
+                    <span class="tutorial__title">arc:</span><br>
+                    <strong>a</strong><span style="color: magenta">[rx,ry]</span>
+                    <span style="color: deepskyblue">[bool]</span>
+                    <span style="color: limegreen">[bool,bool]</span>
+                    <span style="color: orange">[x,y]</span><br>
 
-          <span style="color: magenta">&nbsp;radius/size</span>
-          <span style="color: deepskyblue">rotation</span>
-          <span style="color: limegreen">flags(large, flip)</span>
-          <span style="color: orange">endpoint</span>
+                    <span style="color: magenta">&nbsp;radius/size</span>
+                    <span style="color: deepskyblue">rotation</span>
+                    <span style="color: limegreen">flags(large, flip)</span>
+                    <span style="color: orange">endpoint</span>
+                </div>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="20px">
+                        <use href="#tut-quad-path"></use>
+                    </svg>
+                </div>
+                <div class="tutorial__text">
+                    <span class="tutorial__title">quad path:</span><br>
+                    <strong>q</strong><span style="color: magenta">[x, y]</span>
+                    <span style="color: deepskyblue">[x,y]</span>
+                    <strong>t</strong><span style="color: limegreen">[x,y]</span><br>
+                    <span style="color: magenta">&nbsp;anchor</span>
+                    <span style="color: deepskyblue">end</span>
+                    <span style="color: limegreen">follow</span>
+                </div>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="20px">
+                        <use href="#tut-cube-path"></use>
+                    </svg>
+                </div>
+                <div class="tutorial__text">
+                    <span class="tutorial__title">cube path:</span><br>
+                    <strong>c</strong><span style="color: magenta">[x,y]</span>
+                    <span style="color: deepskyblue">[x,y]</span>
+                    <span style="color: limegreen">[x,y]</span>
+                    <strong>s</strong><span style="color: orange">[x,y]</span>
+                    <span style="color: darkblue">[xy]</span><br>
+                    <span style="color: magenta">&nbsp;anchor'1</span>
+                    <span style="color: deepskyblue">anchor'2</span>
+                    <span style="color: limegreen">end</span>
+                    <span style="color: orange">follow anchor'2</span>
+                    <span style="color: darkblue">end</span>
+                </div>
+            </div>
+            <div class="tutorial__row">
+                <span class="tutorial__title">Single elements:</span>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="15px">
+                        <use href="#tut-element"></use>
+                    </svg>
+                </div>
+                <div class="tutorial__text">
+                    <strong>rect</strong>: x, y, width, height, rx, ry<br>
+                    <strong>circle</strong>: cx, cy, r<br>
+                    <strong>ellipse</strong>: cx, cy, rx, ry<br>
+                    <strong>line</strong>: x1, y1, x2, y2
+                </div>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="15px">
+                        <use href="#tut-polyline"></use>
+                    </svg>
+                </div>
+                <div class="tutorial__text">
+                    <strong>polyline</strong>: points=[...x,y]<br>
+                    <strong>polygon</strong>: points=[...x,y]
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__image">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="20px">
-            <use href="#tut-quad-path"></use>
-          </svg>
+        <div class="tutorial__rows">
+            <div class="tutorial__row">
+                <span class="tutorial__title">Path attributes:</span>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__text">
+                    <strong>M</strong>: move to<br>
+                    <strong>Z</strong>: close path
+                </div>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__text">
+                    fill: [color]<br>
+                    stroke: [color]<br>
+                    stroke-width: [number]<br>
+                    stroke-dasharray<br>
+                    stroke-dashoffset<br>
+                    stroke-linejoin<br>
+                    stroke-linecap
+                </div>
+            </div>
         </div>
-        <div class="tutorial__text">
-          <span class="tutorial__title">quad path:</span><br>
-          <strong>q</strong><span style="color: magenta">[x, y]</span>
-          <span style="color: deepskyblue">[x,y]</span>
-          <strong>t</strong><span style="color: limegreen">[x,y]</span><br>
-          <span style="color: magenta">&nbsp;anchor</span>
-          <span style="color: deepskyblue">end</span>
-          <span style="color: limegreen">follow</span>
-        </div>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__image">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="20px">
-            <use href="#tut-cube-path"></use>
-          </svg>
-        </div>
-        <div class="tutorial__text">
-          <span class="tutorial__title">cube path:</span><br>
-          <strong>c</strong><span style="color: magenta">[x,y]</span>
-          <span style="color: deepskyblue">[x,y]</span>
-          <span style="color: limegreen">[x,y]</span>
-          <strong>s</strong><span style="color: orange">[x,y]</span>
-          <span style="color: darkblue">[xy]</span><br>
-          <span style="color: magenta">&nbsp;anchor'1</span>
-          <span style="color: deepskyblue">anchor'2</span>
-          <span style="color: limegreen">end</span>
-          <span style="color: orange">follow anchor'2</span>
-          <span style="color: darkblue">end</span>
-        </div>
-      </div>
-      <div class="tutorial__row">
-        <span class="tutorial__title">Single elements:</span>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__image">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="15px">
-            <use href="#tut-element"></use>
-          </svg>
-        </div>
-        <div class="tutorial__text">
-          <strong>rect</strong>: x, y, width, height, rx, ry<br>
-          <strong>circle</strong>: cx, cy, r<br>
-          <strong>ellipse</strong>: cx, cy, rx, ry<br>
-          <strong>line</strong>: x1, y1, x2, y2
-        </div>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__image">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="15px">
-            <use href="#tut-polyline"></use>
-          </svg>
-        </div>
-        <div class="tutorial__text">
-          <strong>polyline</strong>: points=[...x,y]<br>
-          <strong>polygon</strong>: points=[...x,y]
-        </div>
-      </div>
     </div>
-    <div class="tutorial__rows">
-      <div class="tutorial__row">
-        <span class="tutorial__title">Path attributes:</span>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__text">
-          <strong>M</strong>: move to<br>
-          <strong>Z</strong>: close path
-        </div>
-      </div>
-      <div class="tutorial__row">
-        <div class="tutorial__text">
-          fill: [color]<br>
-          stroke: [color]<br>
-          stroke-width: [number]<br>
-          stroke-dasharray<br>
-          stroke-dashoffset<br>
-          stroke-linejoin<br>
-          stroke-linecap
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
