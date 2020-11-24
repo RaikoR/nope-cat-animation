@@ -5,8 +5,7 @@
   ],
   "plugins": [
     "stylelint-prettier",
-    "stylelint-scss",
-    "stylelint-no-unsupported-browser-features"
+    "stylelint-scss"
   ],
   "rules": {
     "prettier/prettier": true,
@@ -21,6 +20,7 @@
     "length-zero-no-unit": true,
     "string-no-newline": true,
     "string-quotes": "single",
+    "time-min-milliseconds": 100,
     "value-no-vendor-prefix": true,
     "declaration-bang-space-after": "never",
     "declaration-bang-space-before": "always",

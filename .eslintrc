@@ -87,7 +87,6 @@
         ]
       }
     ],
-    "prefer-arrow/prefer-arrow-functions": "error",
     "prefer-const": "error",
     "prefer-object-spread": "error",
     "quote-props": [
