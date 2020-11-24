@@ -7,19 +7,29 @@ export default class Overlay {
         this.overlayImage = this.element.find('> svg');
         this.zoomBox = this.element.find('.guide__zoombox');
         this.gridBtn = this.element.find('.guide-grid-button');
+        this.toggle = this.element.find('.js-guide-toggle input');
 
         this.showZoom = false;
         this.zoomSizes = [2, 5, 10];
         this.zoomSize = 0;
 
+        // toggle image
+        this.toggle.on('input change', this.toggleImageDisplay.bind(this));
+        // toggle grid
         this.gridBtn.on('click', this.showGuideGrid.bind(this));
-        $(window).on('resize', this.setZoomSize.bind(this));
+        // move zoom window
         this.element.on('mousemove', this.moveGuide.bind(this));
+        // set zoom image size
+        $(window).on('resize', this.setZoomSize.bind(this));
 
         // waits for a frame draw so SVG's size can be correctly determined
         setTimeout(() => {
             $(window).trigger('resize');
         }, 17);
+    }
+
+    toggleImageDisplay(event) {
+        this.overlayImage.css({ opacity: this.toggle.val() });
     }
 
     showGuideGrid(event) {

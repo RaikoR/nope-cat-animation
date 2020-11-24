@@ -1,22 +1,22 @@
 @function get($map, $key) {
-  @if map-has-key($map, $key) {
-    @return map-get($map, $key);
-  }
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
 
-  @error 'Invalid key: `#{$key}` for map `#{$map}`';
+    @error 'Invalid key: `#{$key}` for map `#{$map}`';
 }
 
 @function get-font-weight($key: m) {
-  @return get($font-weight, $key);
+    @return get($font-weight, $key);
 }
 
 $font-weight: (
-  light: 200,
-  semilight: 300,
-  normal: 500,
-  semibold: 600,
-  bold: 700,
-  black: 800
+    light: 200,
+    semilight: 300,
+    normal: 500,
+    semibold: 600,
+    bold: 700,
+    black: 800
 );
 
 $background: #272525;

@@ -115,7 +115,9 @@
 }
 
 .guide__overlay-controls {
-    position: relative;
+    position: absolute;
+    display: flex;
+    top: 48px;
     z-index: 10;
 }
 
