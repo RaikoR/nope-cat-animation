@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Overlay from '~/components/overlay';
+import Anchors from '~/components/anchors';
 
 export default class Guide {
     constructor() {
@@ -8,6 +9,7 @@ export default class Guide {
         this.guides.on('click', '.guide-button', this.showGuide.bind(this));
 
         this.overlay = new Overlay();
+        this.anchors = new Anchors();
     }
 
     showGuide(event) {

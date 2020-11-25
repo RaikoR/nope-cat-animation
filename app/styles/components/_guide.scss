@@ -103,14 +103,14 @@
 
     &.has-grid {
         background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
-            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px);
+        repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px);
     }
 
     &.has-hd-grid {
         background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
-            repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
-            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
-            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px);
+        repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
+        repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+        repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px);
     }
 }
 
@@ -132,19 +132,35 @@
 
     &.has-grid {
         background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
-            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
-            url('/images/Nope-kass-Stroke.svg');
+        repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+        url('/images/Nope-kass-Stroke.svg');
     }
 
     &.has-hd-grid {
         background-image: repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
-            repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
-            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
-            repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
-            url('/images/Nope-kass-Stroke.svg');
+        repeating-linear-gradient(to right, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
+        repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 100px),
+        repeating-linear-gradient(to bottom, rgba($highlight, .4), rgba($highlight, .4) 1px, transparent 1px, transparent 10px),
+        url('/images/Nope-kass-Stroke.svg');
     }
 
     .show-zoom & {
         display: block;
     }
+}
+
+.anchors {
+    display: flex;
+    align-items: center;
+}
+
+.anchor__controls {
+    display: flex;
+    flex-flow: column;
+}
+
+.anchor__values {
+    padding-left: 8px;
+    color: $highlight;
+    font-size: 14px;
 }
