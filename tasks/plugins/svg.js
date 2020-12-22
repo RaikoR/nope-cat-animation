@@ -1,15 +1,26 @@
 const HtmlwebpackSvgPlugin = require('html-webpack-inline-svg-plugin');
 
 module.exports = (env) => {
-  const defaultConfig = new HtmlwebpackSvgPlugin({
-    runPreEmit: true,
-    inlineAll: true
-  });
+    const defaultConfig = new HtmlwebpackSvgPlugin({
+        inlineAll: true,
+        runPreEmit: true,
+        svgoConfig: [
+            {
+                collapseGroups: false,
+            },
+            {
+                convertShapeToPath: false,
+            },
+            {
+                mergePaths: false,
+            },
+        ],
+    });
 
-  const plugin = {
-    production: defaultConfig,
-    development: defaultConfig
-  };
+    const plugin = {
+        development: defaultConfig,
+        production: defaultConfig,
+    };
 
-  return plugin[env];
+    return plugin[env];
 };

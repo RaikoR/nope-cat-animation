@@ -1,0 +1,113 @@
+.eye-transform {
+    #eye-right-mask & {
+        transform-origin: 634.56px 290.56px;
+        transform: rotate(-8deg) scaleY(0);
+
+        .initAnim & {
+            animation: 3000ms linear 1s 1 normal forwards running initAnimBlinkRight;
+        }
+
+        .initAnimEnd & {
+            transform: rotate(-8deg) scaleY(1);
+            transition: transform .06s;
+            animation: none;
+        }
+
+        & > path {
+            transform-origin: 634.56px 290.56px;
+            transform: rotate(8deg);
+        }
+    }
+
+    #eye-right-mask.close & {
+        transform: rotate(-8deg) scaleY(0);
+    }
+
+    #eye-left-mask & {
+        transform-origin: 456.65px 301px;
+        transform: rotate(5deg) scaleY(0);
+
+        .initAnim & {
+            animation: 3000ms linear 1s 1 normal forwards running initAnimBlinkLeft;
+        }
+
+        .initAnimEnd & {
+            transform: rotate(5deg) scaleY(1);
+            transition: transform .06s;
+            animation: none;
+        }
+
+        & > path {
+            transform-origin: 456.65px 301px;
+            transform: rotate(-5deg);
+        }
+
+        &.close path {
+            transform: rotate(5deg) scaleY(0);
+        }
+    }
+
+    #eye-left-mask.close & {
+        transform: rotate(5deg) scaleY(0);
+    }
+}
+
+@keyframes initAnimBlinkRight {
+    0% {
+        transform: rotate(-8deg) scaleY(0);
+    }
+
+    1%,
+    88% {
+        transform: rotate(-8deg) scaleY(.4);
+    }
+
+    89%,
+    90% {
+        transform: rotate(-8deg) scaleY(0);
+    }
+
+    92%,
+    94% {
+        transform: rotate(-8deg) scaleY(1);
+    }
+
+    96.5%,
+    98% {
+        transform: rotate(-8deg) scaleY(0);
+    }
+
+    100% {
+        transform: rotate(-8deg) scaleY(1);
+    }
+}
+
+@keyframes initAnimBlinkLeft {
+    0% {
+        transform: rotate(5deg) scaleY(0);
+    }
+
+    1%,
+    88% {
+        transform: rotate(5deg) scaleY(.4);
+    }
+
+    89%,
+    90% {
+        transform: rotate(5deg) scaleY(0);
+    }
+
+    92%,
+    94% {
+        transform: rotate(5deg) scaleY(1);
+    }
+
+    96.5%,
+    98% {
+        transform: rotate(5deg) scaleY(0);
+    }
+
+    100% {
+        transform: rotate(5deg) scaleY(1);
+    }
+}

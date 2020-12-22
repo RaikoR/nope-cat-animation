@@ -38,7 +38,6 @@
     "block-opening-brace-space-before": "always",
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
-    "selector-max-id": 0,
     "selector-no-vendor-prefix": true,
     "selector-list-comma-newline-after": "always",
     "rule-empty-line-before": [

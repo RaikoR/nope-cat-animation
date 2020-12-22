@@ -54,7 +54,7 @@ export default class Anchors {
         const svgCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
 
         svgCircle.setAttribute('cx', this.point[0]);
-        svgCircle.setAttribute('cy', this.point[0]);
+        svgCircle.setAttribute('cy', this.point[1]);
         svgCircle.setAttribute('r', '2');
         svgCircle.setAttribute('fill', 'red');
 

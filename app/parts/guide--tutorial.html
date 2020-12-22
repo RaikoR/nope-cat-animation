@@ -135,5 +135,33 @@
                 </div>
             </div>
         </div>
+        <div class="tutorial__rows">
+            <div class="tutorial__row">
+                <span class="tutorial__title">SMIL spec:</span>
+            </div>
+            <div class="tutorial__row">
+                <div class="tutorial__text">
+                    <strong>global</strong>:
+                    xlink:href=[#targetEl]<br>
+                    attributeName=[string]<br>
+                    attributeType=[CSS|XML|auto]<br>
+                    <br>
+                    <strong>animate</strong>: from=[] to=[] by=[] dur=['s|t]<br>
+                    &nbsp;values=[0;...n;1] keyTimes=[...n(=values)] keySplines=[...x1 y1 x2 y2(=values-1)]<br>
+                    &nbsp;begin=[click|'s|t|anim.[event]|...] end=['begin] - event: [begin|end|repeat(n)]<br>
+                    &nbsp;calcMode=[linear|discrete|paced|spline]<br>
+                    &nbsp;&nbsp;discrete: no interpolation, paced: ignore keyTimes, spline: use CB function<br>
+                    &nbsp;additive=[sum|replace] accumulate=[none|sum] fill=[freeze|remove]<br>
+                    &nbsp;repeatCount=[n|indefinite] repeatDur=[t] min=[t] max=[t] restart=[always|whenNotActive|never]<br>
+                    <br>
+                    <strong>animateMotion</strong>: move element over a given path<br>
+                    &nbsp;path=[d] keyPoints=[...n(=keytimes)] rotate=[auto|auto-reverse|'deg]<br>
+                    &nbsp;&nbsp;<strong>mpath</strong>: xlink:href=[#target]<br>
+                    <strong>animateTransform</strong><br>
+                    &nbsp;type=[translate|scale|rotate|skewX|skewY]
+                    <strong>set</strong>: set attribute for a given time
+                </div>
+            </div>
+        </div>
     </div>
 </div>

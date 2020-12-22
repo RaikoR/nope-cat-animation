@@ -37,3 +37,15 @@
 .s-black {
     stroke: $fill-black;
 }
+
+.s-anim {
+    fill: none;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+svg > g {
+    pointer-events: none;
+}

@@ -1,5 +1,8 @@
 .board {
     width: 100%;
     background-color: $background;
-    padding-top: 48px;
+
+    svg {
+        display: block;
+    }
 }

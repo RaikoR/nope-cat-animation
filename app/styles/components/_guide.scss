@@ -2,7 +2,8 @@
     position: relative;
     display: flex;
     flex-flow: row;
-    height: 0;
+    height: 48px;
+    background-color: $background;
     overflow: visible;
 }
 

@@ -1,98 +1,98 @@
 .letters {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: $background;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
 }
 
 .letter__center {
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: visible;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
 }
 
 .letter__pointer {
-  width: 1px;
-  height: 1px;
-  background: $highlight;
+    width: 1px;
+    height: 1px;
+    background: $highlight;
 }
 
 .letter__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 10px;
-  height: 14px;
-  color: $highlight;
-  font-size: 14px;
-  line-height: 14px;
-  transform-origin: 50% 50%;
-  transition-timing-function: linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 10px;
+    height: 14px;
+    color: $highlight;
+    font-size: 14px;
+    line-height: 14px;
+    transform-origin: 50% 50%;
+    transition-timing-function: linear;
 }
 
 .letter--scale {
-  width: 100%;
-  height: 100%;
-  transform: scale(0);
-  transform-origin: 50% 50%;
-  animation: 5000ms linear 0s infinite reverse none paused letterScale;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    animation: 5000ms linear 0s infinite reverse none paused letterScale;
 
-  .is-playing & {
-    animation-play-state: running;
-  }
+    .is-playing & {
+        animation-play-state: running;
+    }
 }
 
 .letter--pos {
-  width: 100%;
-  height: 100%;
-  transform: translate(0, 0);
-  transform-origin: 50% 50%;
-  animation: 5000ms linear 0s infinite reverse none paused letterTranslate;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+    transform-origin: 50% 50%;
+    animation: 5000ms linear 0s infinite reverse none paused letterTranslate;
 
-  .is-playing & {
-    animation-play-state: running;
-  }
+    .is-playing & {
+        animation-play-state: running;
+    }
 }
 
 @keyframes letterScale {
-  0% {
-    transform: scale(0);
-  }
+    0% {
+        transform: scale(0);
+    }
 
-  10% {
-    transform: scale(1);
-  }
+    10% {
+        transform: scale(1);
+    }
 
-  80% {
-    transform: scale(1);
-  }
+    80% {
+        transform: scale(1);
+    }
 
-  90%,
-  100% {
-    transform: scale(0);
-  }
+    90%,
+    100% {
+        transform: scale(0);
+    }
 }
 
 @keyframes letterTranslate {
-  0% {
-    transform: translate(0, -400px);
-  }
+    0% {
+        transform: translate(0, -400px);
+    }
 
-  10% {
-    transform: translate(0, -375px);
-  }
+    10% {
+        transform: translate(0, -375px);
+    }
 
-  80%,
-  90% {
-    transform: translate(0, -75px);
-  }
+    80%,
+    90% {
+        transform: translate(0, -75px);
+    }
 
-  100% {
-    transform: translate(0, 0);
-  }
+    100% {
+        transform: translate(0, 0);
+    }
 }
