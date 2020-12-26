@@ -67,6 +67,8 @@ export default class ImageAnimation {
         this.element.classList.add('initAnim');
         this.animateEyesIntro();
 
+        this.element.addEventListener('click', this.getPos.bind(this));
+
         setTimeout(() => {
             this.element.classList.add('initAnimEnd');
 
@@ -74,8 +76,6 @@ export default class ImageAnimation {
             // this.interactives.follow.eyeLeft.runFollow();
             this.element.addEventListener('mousemove', this.animateEyesFollow.bind(this));
             this.element.addEventListener('mouseout', this.animateEyesReset.bind(this));
-
-            this.element.addEventListener('click', this.setPos.bind(this));
 
             this.animateEyesBlink();
         }, 4000);
@@ -86,12 +86,14 @@ export default class ImageAnimation {
      *
      * @param event
      */
-    setPos(event) {
+    getPos(event) {
         console.log(this.scale);
         console.log(event.offsetX);
         console.log(event.offsetY);
         console.log(event.offsetX * this.scale);
         console.log(event.offsetY * this.scale);
+
+        console.log(event.target.getBBox());
     }
 
     /**

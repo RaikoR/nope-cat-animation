@@ -14,6 +14,9 @@ module.exports = (env) => {
             {
                 mergePaths: false,
             },
+            {
+                convertPathData: false,
+            },
         ],
     });
 
