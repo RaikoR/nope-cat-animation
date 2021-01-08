@@ -147,7 +147,7 @@
                     attributeType=[CSS|XML|auto]<br>
                     <br>
                     <strong>animate</strong>: from=[] to=[] by=[] dur=['s|t]<br>
-                    &nbsp;values=[0;...n;1] keyTimes=[...n(=values)] keySplines=[...x1 y1 x2 y2(=values-1)]<br>
+                    &nbsp;values=[...n] keyTimes=[0;...n;1(=values)] keySplines=[...x1 y1 x2 y2(=values-1)]<br>
                     &nbsp;begin=[click|'s|t|anim.[event]|...] end=['begin] - event: [begin|end|repeat(n)]<br>
                     &nbsp;calcMode=[linear|discrete|paced|spline]<br>
                     &nbsp;&nbsp;discrete: no interpolation, paced: ignore keyTimes, spline: use CB function<br>
@@ -158,7 +158,8 @@
                     &nbsp;path=[d] keyPoints=[...n(=keytimes)] rotate=[auto|auto-reverse|'deg]<br>
                     &nbsp;&nbsp;<strong>mpath</strong>: xlink:href=[#target]<br>
                     <strong>animateTransform</strong><br>
-                    &nbsp;type=[translate|scale|rotate|skewX|skewY]
+                    &nbsp;type=[translate|scale|rotate|skewX|skewY]<br>
+                    <i>Dont forget to set attributeName="transform"</i><br>
                     <strong>set</strong>: set attribute for a given time
                 </div>
             </div>

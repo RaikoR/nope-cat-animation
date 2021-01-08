@@ -4,5 +4,9 @@
 
     svg {
         display: block;
+
+        &.animation-ref {
+            display: none;
+        }
     }
 }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 0 0" class="animation-ref">
+    <defs>
+        <!-- NOSE RIDGE / MOUTH -->
+        <animate id="animateLineNose1" xlink:href="#lineNose1" attributeName="stroke-dashoffset" from="40.83" to="0" begin="animateLineNose2.begin + 0.28s" dur="0.48" fill="freeze"/>
+        <animate id="animateLineNose2" xlink:href="#lineNose2" attributeName="stroke-dashoffset" from="67.46" to="0" begin="0" dur="0.8" fill="freeze"/>
+        <animate id="animateLineNose3" xlink:href="#lineNose3" attributeName="stroke-dashoffset" from="36.57" to="0" begin="animateLineNose2.begin + 0.43s" dur="0.39" fill="freeze"/>
+        <animate id="animateLineNose4" xlink:href="#lineNose4" attributeName="stroke-dashoffset" from="87.33" to="29.11" begin="0.1" dur="0.8" fill="freeze"/>
+        <animate id="animateLineNose4b" xlink:href="#lineNose4" attributeName="stroke-dasharray" from="72.77 87.33" to="58.22 0" begin="0.1" dur="0.8" fill="freeze"/>
+        <animate id="animateLineNose5_l" xlink:href="#lineNose5_l" attributeName="stroke-dashoffset" from="100.12" to="0" begin="0" dur="0.6" fill="freeze"/>
+        <animate id="animateLineNose5_r" xlink:href="#lineNose5_r" attributeName="stroke-dashoffset" from="-36.01" to="0" begin="0" dur="0.6" fill="freeze"/>
+        <animateTransform id="animateLineNose6" xlink:href="#lineNose6" attributeName="transform" type="translate" begin="1.4" dur="0.3"
+                          values="-10 -40; 0 0" keyTimes="0;1" keySplines=".45,0,.99,.89" calcMode="spline" fill="freeze" />
+    </defs>
+</svg>

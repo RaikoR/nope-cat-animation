@@ -94,6 +94,9 @@ export default class ImageAnimation {
         console.log(event.offsetY * this.scale);
 
         console.log(event.target.getBBox());
+        if (event.target.tagName === 'path') {
+            console.log(event.target.getTotalLength());
+        }
     }
 
     /**
