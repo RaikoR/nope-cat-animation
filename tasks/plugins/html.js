@@ -1,16 +1,19 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
-  const defaultConfig = new HtmlWebpackPlugin({
-    hash: true,
-    filename: 'index.html',
-    template: './app/index.html.ejs'
-  });
+    const defaultConfig = new HtmlWebpackPlugin({
+        filename: 'index.html',
+        hash: true,
+        template: './app/index.html.ejs',
+        templateParameters: {
+            nodeEnv: env.NODE_ENV,
+        },
+    });
 
-  const plugin = {
-    production: defaultConfig,
-    development: defaultConfig
-  };
+    const plugin = {
+        development: defaultConfig,
+        production: defaultConfig,
+    };
 
-  return plugin[env];
+    return plugin[env];
 };

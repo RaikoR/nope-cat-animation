@@ -35,6 +35,26 @@ export default class ImageAnimation {
             this.initLooks();
             this.startFrames();
         }, 17);
+
+        // this.readPaths();
+    }
+
+    /**
+     * Set and display path's stroke-dasharray and dash-offset values for animations
+     */
+    readPaths() {
+        const lines = document.getElementById('faceBottom');
+        const output = document.getElementById('pathStroke');
+
+        for (const line of lines.childNodes) {
+            line.strokeDasharray = line.getTotalLength();
+            line.strokeDashoffset = line.getTotalLength();
+            line.setAttribute('stroke-dasharray', line.getTotalLength().toFixed(2));
+            line.setAttribute('stroke-dashoffset', line.getTotalLength().toFixed(2));
+
+            output.innerText += line.outerHTML;
+            output.innerHTML += '<br>';
+        }
     }
 
     /**
@@ -78,11 +98,17 @@ export default class ImageAnimation {
             this.element.addEventListener('mouseout', this.animateEyesReset.bind(this));
 
             this.animateEyesBlink();
+
+            // trigger global animation chain
+            // ToDo: little readability conflict with id/class names
+            document.getElementById('initAnim').beginElement();
+            // thats mostly SVG <anim> chained
+
         }, 4000);
     }
 
     /**
-     * For debugging positions on screen
+     * Display debugging positions on screen
      *
      * @param event
      */
@@ -94,7 +120,8 @@ export default class ImageAnimation {
         console.log(event.offsetY * this.scale);
 
         console.log(event.target.getBBox());
-        if (event.target.tagName === 'path') {
+        console.log(event.target.tagName);
+        if (event.target.tagName === 'path' || event.target.tagName === 'line') {
             console.log(event.target.getTotalLength());
         }
     }

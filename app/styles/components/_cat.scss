@@ -52,12 +52,31 @@
     }
 }
 
+#eye-left-light, #eye-right-light {
+    opacity: 1;
+    transition: opacity .3s;
+
+    .initAnimEnd & {
+        opacity: 1;
+    }
+}
+
 @keyframes initAnimBlinkRight {
     0% {
         transform: rotate(-8deg) scaleY(0);
     }
 
     8%,
+    45% {
+        transform: rotate(-8deg) scaleY(.45);
+    }
+
+    46%,
+    47% {
+        transform: rotate(-8deg) scaleY(0);
+    }
+
+    50%,
     88% {
         transform: rotate(-8deg) scaleY(.45);
     }
@@ -88,6 +107,16 @@
     }
 
     8%,
+    45% {
+        transform: rotate(5deg) scaleY(.45);
+    }
+
+    46%,
+    47% {
+        transform: rotate(5deg) scaleY(0);
+    }
+
+    50%,
     88% {
         transform: rotate(5deg) scaleY(.45);
     }

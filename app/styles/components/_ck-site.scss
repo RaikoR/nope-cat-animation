@@ -2,6 +2,16 @@
     width: 100%;
     background-color: $background;
 
+    &--live {
+        width: 100vw;
+        height: 100vh;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     svg {
         display: block;
 

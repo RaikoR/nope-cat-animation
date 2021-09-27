@@ -7,15 +7,18 @@
     <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"/>
 </head>
 <body>
+<% if(process.env.NODE_ENV == 'development') { %>
 <div class="guide">
     <%= require('./parts/guide--tutorial.html') %>
     <%= require('./parts/guide--overlay.html') %>
     <%= require('./parts/guide--anchors.html') %>
 </div>
-<div id="" class="board">
+<% } %>
+<div id="" class="board <%= process.env.NODE_ENV == 'production' ? 'board--live' : 'board--dev' %>">
     <img src="app/assets/svg/sneakpeek_animations.svg"/>
     <img src="app/assets/svg/sneakpeek.svg"/>
 </div>
+<div id="pathStroke"></div>
 <%= require('./parts/app--letters.html') %>
 </body>
 </html>
