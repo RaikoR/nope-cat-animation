@@ -1,7 +1,7 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930.49 657.93">
     <defs>
         <style>
-            .cls-1{fill:#272525;}.cls-2,.cls-3{fill:#ee3e47;stroke:#ee3e47;}.cls-2,.cls-3,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-linecap:round;}.cls-2,.cls-3,.cls-5,.cls-8,.cls-9{stroke-linejoin:round;}.cls-2{stroke-width:4px;}.cls-3{stroke-width:6px;}.cls-4{fill:#fff;}.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{fill:none;stroke-width:5px;}.cls-5{stroke:#7d65ef;}.cls-6,.cls-9{stroke:#ffb127;}.cls-6,.cls-7{stroke-miterlimit:10;}.cls-7,.cls-8{stroke:#fff;}.cls-10{fill:#ffb127;}.cls-11{fill:#7d65ef;}.cls-12{fill:#202020;}
+            .cls-1{fill:#272525;}.cls-2,.cls-3{fill:#ee3e47;stroke:#ee3e47;}.cls-2,.cls-3,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-linecap:round;stroke-linejoin:round;}.cls-2,.cls-3,.cls-5,.cls-8,.cls-9{stroke-linejoin:round;}.cls-2{stroke-width:4px;}.cls-3{stroke-width:6px;}.cls-4{fill:#fff;}.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{fill:none;stroke-width:5px;}.cls-5{stroke:#7d65ef;}.cls-6,.cls-9{stroke:#ffb127;}.cls-6,.cls-7{stroke-miterlimit:10;}.cls-7,.cls-8{stroke:#fff;}.cls-10{fill:#ffb127;}.cls-11{fill:#7d65ef;}.cls-12{fill:#202020;}
         </style>
     </defs>
     <rect class="cls-1" width="930.49" height="657.93"/>

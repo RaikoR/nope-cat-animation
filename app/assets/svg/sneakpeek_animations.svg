@@ -1,14 +1,180 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 0 0" class="animation-ref">
     <defs>
         <!-- NOSE RIDGE / MOUTH -->
-        <animate id="animateLineNose1" xlink:href="#lineNose1" attributeName="stroke-dashoffset" from="40.83" to="0" begin="animateLineNose2.begin + 0.28s" dur="0.48" fill="freeze"/>
-        <animate id="animateLineNose2" xlink:href="#lineNose2" attributeName="stroke-dashoffset" from="67.46" to="0" begin="0" dur="0.8" fill="freeze"/>
-        <animate id="animateLineNose3" xlink:href="#lineNose3" attributeName="stroke-dashoffset" from="36.57" to="0" begin="animateLineNose2.begin + 0.43s" dur="0.39" fill="freeze"/>
-        <animate id="animateLineNose4" xlink:href="#lineNose4" attributeName="stroke-dashoffset" from="87.33" to="29.11" begin="0.1" dur="0.8" fill="freeze"/>
-        <animate id="animateLineNose4b" xlink:href="#lineNose4" attributeName="stroke-dasharray" from="72.77 87.33" to="58.22 0" begin="0.1" dur="0.8" fill="freeze"/>
-        <animate id="animateLineNose5_l" xlink:href="#lineNose5_l" attributeName="stroke-dashoffset" from="100.12" to="0" begin="0" dur="0.6" fill="freeze"/>
-        <animate id="animateLineNose5_r" xlink:href="#lineNose5_r" attributeName="stroke-dashoffset" from="-36.01" to="0" begin="0" dur="0.6" fill="freeze"/>
-        <animateTransform id="animateLineNose6" xlink:href="#lineNose6" attributeName="transform" type="translate" begin="1.4" dur="0.3"
-                          values="-10 -40; 0 0" keyTimes="0;1" keySplines=".45,0,.99,.89" calcMode="spline" fill="freeze" />
+        <animate id="initNose" begin="initFaceT.begin + 1.2" dur="0"/>
+
+        <animate id="animateLineNose1" xlink:href="#lineNose1" attributeName="stroke-dashoffset" from="40.83" to="0" begin="animateLineNose2.begin + 0.28s" dur="0.35" fill="freeze"/>
+        <animate id="animateLineNose2" xlink:href="#lineNose2" attributeName="stroke-dashoffset" from="67.46" to="0" begin="initNose.begin" dur="0.6" fill="freeze"/>
+        <animate id="animateLineNose3" xlink:href="#lineNose3" attributeName="stroke-dashoffset" from="36.57" to="0" begin="animateLineNose2.begin + 0.43s" dur="0.30" fill="freeze"/>
+        <animate id="animateLineNose4" xlink:href="#lineNose4" attributeName="stroke-dashoffset" from="87.33" to="29.11" begin="initNose.begin + 0.1" dur="0.6" fill="freeze"/>
+        <animate id="animateLineNose4b" xlink:href="#lineNose4" attributeName="stroke-dasharray" from="72.77 87.33" to="58.22 0" begin="initNose.begin + 0.1" dur="0.6" fill="freeze"/>
+        <animate id="animateLineNose5_l" xlink:href="#lineNose5_l" attributeName="stroke-dashoffset" from="100.12" to="0" begin="initNose.begin" dur="0.6" fill="freeze"/>
+        <animate id="animateLineNose5_r" xlink:href="#lineNose5_r" attributeName="stroke-dashoffset" from="-36.01" to="0" begin="initNose.begin" dur="0.6" fill="freeze"/>
+        <!-- not a nose -->
+        <animateTransform id="animateLineNose6" xlink:href="#lineNose6" attributeName="transform" type="translate" begin="initNose.begin + 1.2" dur="0.3"
+                          values="-10 -40; 0 0" keyTimes="0;1" keySplines=".45,0,.99,.89" calcMode="spline" fill="freeze"/>
+        <animateTransform id="animateLineHeart" xlink:href="#lineHeart" attributeName="transform" type="scale" begin="initNose.begin + 1.1" dur="0.2" from="0" to="1" fill="freeze" />
+
+        <!-- EARS: R -->
+        <animate id="initEarR" begin="initAnim.begin + 1.3" dur="0"/>
+
+        <animate id="animateLineEar_r_1" xlink:href="#lineEar_r1" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_r_3.end - 0.2" dur="0.4" fill="freeze"/>
+        <animate id="animateLineEar_r_2" xlink:href="#lineEar_r2" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_r_4.end" dur="0.1" fill="freeze"/>
+        <animate id="animateLineEar_r_3" xlink:href="#lineEar_r3" attributeName="stroke-dashoffset" to="0" begin="initEarR.begin" dur="0.4" fill="freeze"/>
+        <animate id="animateLineEar_r_4" xlink:href="#lineEar_r4" attributeName="stroke-dashoffset" to="0" begin="initEarR.begin + 0.2" dur="0.4" fill="freeze"/>
+        <animate id="animateLineEar_r_5" xlink:href="#lineEar_r5" attributeName="stroke-dashoffset" to="0" begin="initEarR.begin + 0.4" dur="0.2" fill="freeze"/>
+        <animate id="animateLineEar_r_6" xlink:href="#lineEar_r6" attributeName="stroke-dashoffset" to="0" begin="initEarR.begin + 0.6" dur="0.4" fill="freeze"/>
+        <animate id="animateLineEar_r_7" xlink:href="#lineEar_r7" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_r_2.end + 0.2" dur="0.2" fill="freeze"/>
+        <animate id="animateLineEar_r_8" xlink:href="#lineEar_r8" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_r_1.end" dur="0.4" fill="freeze"/>
+
+        <set id="animateLineEar_r_1s" xlink:href="#lineEar_r1" attributeName="stroke-dasharray" to="55.28 14" begin="animateLineEar_r_1.end" dur="indefinite"/>
+        <set id="animateLineEar_r_3s" xlink:href="#lineEar_r3" attributeName="stroke-dasharray" to="41.81 14" begin="animateLineEar_r_3.end" dur="indefinite"/>
+        <set id="animateLineEar_r_8s" xlink:href="#lineEar_r8" attributeName="stroke-dasharray" to="66.21 14" begin="animateLineEar_r_8.end" dur="indefinite"/>
+
+        <animate id="animateLineEar_r_1b" xlink:href="#lineEar_r1-f" attributeName="stroke-dashoffset" to="69.28" begin="animateLineEar_r_1.end" dur="1" repeatCount="indefinite"/>
+        <animate id="animateLineEar_r_3b" xlink:href="#lineEar_r3-f" attributeName="stroke-dashoffset" to="-55.81" begin="animateLineEar_r_3.end" dur="1" repeatCount="indefinite"/>
+        <animate id="animateLineEar_r_8b" xlink:href="#lineEar_r8-f" attributeName="stroke-dashoffset" to="-80.21" begin="animateLineEar_r_8.end" dur="1" repeatCount="indefinite"/>
+
+        <!-- EARS: L -->
+        <animate id="initEarL" begin="initAnim.begin + 0.2" dur="0"/>
+
+        <animate id="animateLineEar_f_1" xlink:href="#lineEar_f1" attributeName="stroke-dashoffset" to="0" begin="initEarL.begin" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_2" xlink:href="#lineEar_f2" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_1.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_3" xlink:href="#lineEar_f3" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_2.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_4" xlink:href="#lineEar_f4" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_3.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_5" xlink:href="#lineEar_f5" attributeName="stroke-dashoffset" to="0" begin="initEarL.begin + 0.15" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_6" xlink:href="#lineEar_f6" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_5.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_7" xlink:href="#lineEar_f7" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_6.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_8" xlink:href="#lineEar_f8" attributeName="stroke-dashoffset" to="0" begin="initEarL.begin + 0.3" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_9" xlink:href="#lineEar_f9" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_8.end - 0.1" dur="0.2" fill="freeze"/>
+        <animate id="animateLineEar_f_10" xlink:href="#lineEar_f10" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_9.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_11" xlink:href="#lineEar_f11" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_10.end - 0.1" dur="0.2" fill="freeze"/>
+        <animate id="animateLineEar_f_12" xlink:href="#lineEar_f12" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_11.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_13" xlink:href="#lineEar_f13" attributeName="stroke-dashoffset" to="0" begin="initEarL.begin + 0.45" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_14" xlink:href="#lineEar_f14" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_13.end" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_15" xlink:href="#lineEar_f15" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_14.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateLineEar_f_16" xlink:href="#lineEar_f16" attributeName="stroke-dashoffset" to="0" begin="initEarL.begin + 0.6" dur="0.3" fill="freeze"/>
+
+        <animate id="animateLineEar_f_17" xlink:href="#lineEar_f17" attributeName="stroke-dashoffset" to="0" begin="initNose.begin + 1" dur="0.14" fill="freeze"/>
+        <animate id="animateLineEar_f_18" xlink:href="#lineEar_f18" attributeName="stroke-dashoffset" to="0" begin="animateLineEar_f_17.end" dur="0.14" fill="freeze"/>
+
+        <!-- FACE: TOP -->
+        <animate id="initFaceT" begin="initAnim.begin" dur="0"/>
+
+        <animate id="animateFace_t_1" xlink:href="#lineFace_t_m1" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_2" xlink:href="#lineFace_t_m2" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.3" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_3" xlink:href="#lineFace_t_m3" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.4" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_4" xlink:href="#lineFace_t_m4" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.5" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_5" xlink:href="#lineFace_t_m5" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.6" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_6" xlink:href="#lineFace_t_m6" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.7" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_7" xlink:href="#lineFace_t_m7" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.8" dur="0.6" fill="freeze"/>
+        <animate id="animateFace_t_8" xlink:href="#lineFace_t_m8" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_9.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_9" xlink:href="#lineFace_t_m9" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.9" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_10" xlink:href="#lineFace_t_m10" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_11.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_11" xlink:href="#lineFace_t_m11" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_12" xlink:href="#lineFace_t_m12" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_13.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_13" xlink:href="#lineFace_t_m13" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_14" xlink:href="#lineFace_t_m14" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_15" xlink:href="#lineFace_t_m15" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_16.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_16" xlink:href="#lineFace_t_m16" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.3" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_17" xlink:href="#lineFace_t_m17" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_18.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_18" xlink:href="#lineFace_t_m18" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.4" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_19" xlink:href="#lineFace_t_m19" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_20.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_20" xlink:href="#lineFace_t_m20" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.5" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_21" xlink:href="#lineFace_t_m21" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_27.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_22" xlink:href="#lineFace_t_m22" attributeName="stroke-dashoffset" to="0" begin="animateFace_t_25.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_23" xlink:href="#lineFace_t_m23" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_24" xlink:href="#lineFace_t_m24" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.4" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_25" xlink:href="#lineFace_t_m25" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.5" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_26" xlink:href="#lineFace_t_m26" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.6" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_27" xlink:href="#lineFace_t_m27" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 1.7" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h1" xlink:href="#lineFace_t_h1" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h2" xlink:href="#lineFace_t_h2" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h3" xlink:href="#lineFace_t_h3" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h4" xlink:href="#lineFace_t_h4" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.3" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h5" xlink:href="#lineFace_t_h5" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.4" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h6" xlink:href="#lineFace_t_h6" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.5" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h7" xlink:href="#lineFace_t_h7" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.6" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h8" xlink:href="#lineFace_t_h8" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.7" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h9" xlink:href="#lineFace_t_h9" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.8" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_t_h10" xlink:href="#lineFace_t_h10" attributeName="stroke-dashoffset" to="0" begin="initFaceT.begin + 0.9" dur="0.3" fill="freeze"/>
+
+        <animate id="endFaceT" begin="animateFace_t_27.end" dur="0"/>
+
+        <!-- FACE: SIDE -->
+        <animate id="initFaceS" begin="initAnim.begin" dur="0" />
+
+        <animate id="animateFace_s_1" xlink:href="#lineFace_s_m2" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_2" xlink:href="#lineFace_s_d5" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_1.end - 0.1 " dur="0.4" fill="freeze"/>
+        <animate id="animateFace_s_3" xlink:href="#lineFace_s_m1" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_4" xlink:href="#lineFace_s_d4" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_3.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_5" xlink:href="#lineFace_s_d3" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.4" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_6" xlink:href="#lineFace_s_d2" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.5" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_7" xlink:href="#lineFace_s_d1" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.6" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_8" xlink:href="#lineFace_s_h1" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_9" xlink:href="#lineFace_s_m3" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_8.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_10" xlink:href="#lineFace_s_d6" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_9.end - 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_11" xlink:href="#lineFace_s_h2" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_12" xlink:href="#lineFace_s_m4" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_11.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_13" xlink:href="#lineFace_s_d7" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_12.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_14" xlink:href="#lineFace_s_h3" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.3" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_15" xlink:href="#lineFace_s_m5" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_14.end - 0.1" dur="0.2" fill="freeze"/>
+        <animate id="animateFace_s_16" xlink:href="#lineFace_s_d9" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_15.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_17" xlink:href="#lineFace_s_d8" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_16.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_18" xlink:href="#lineFace_s_h4" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.4" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_19" xlink:href="#lineFace_s_m6" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_18.end - 0.1" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_20" xlink:href="#lineFace_s_d10" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_19.end - 0.1" dur="0.4" fill="freeze"/>
+        <animate id="animateFace_s_21" xlink:href="#lineFace_s_m7" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.45" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_22" xlink:href="#lineFace_s_d11" attributeName="stroke-dashoffset" to="0" begin="animateFace_s_21.end + 0.2" dur="0.3" fill="freeze"/>
+        <animate id="animateFace_s_23" xlink:href="#lineFace_s_m8" attributeName="stroke-dashoffset" to="0" begin="initFaceS.begin + 0.5" dur="0.3" fill="freeze"/>
+
+        <!-- FACE: BOTTOM -->
+        <animate id="initFaceB" begin="initFaceS.begin + 0.65" dur="0" />
+
+        <animate id="animateFace_b_1" xlink:href="#lineFace_b_d1" attributeName="stroke-dashoffset" to="0" begin="animateLineNose1.begin + 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_2" xlink:href="#lineFace_b_d2" attributeName="stroke-dashoffset" to="0" begin="animateLineNose1.begin + 0.18" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_3" xlink:href="#lineFace_b_d3" attributeName="stroke-dashoffset" to="0" begin="animateLineNose1.begin + 0.36" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_4" xlink:href="#lineFace_b_m5" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.15" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_5" xlink:href="#lineFace_b_m4" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_4.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_6" xlink:href="#lineFace_b_m1" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_7" xlink:href="#lineFace_b_m6" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_6.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_8" xlink:href="#lineFace_b_m9" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_7.end - 0.1" dur="0.28" fill="freeze" />
+        <animate id="animateFace_b_9" xlink:href="#lineFace_b_d5" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_8.end - 0.1" dur="0.25" fill="freeze" />
+        <animate id="animateFace_b_10" xlink:href="#lineFace_b_m2" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_11" xlink:href="#lineFace_b_m7" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_10.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_12" xlink:href="#lineFace_b_m10" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_11.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_13" xlink:href="#lineFace_b_m12" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_12.end - 0.1" dur="0.2" fill="freeze" />
+        <animate id="animateFace_b_14" xlink:href="#lineFace_b_d6" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_13.end - 0.1" dur="0.25" fill="freeze" />
+        <animate id="animateFace_b_15" xlink:href="#lineFace_b_d4" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_14.end - 0.1" dur="0.23" fill="freeze" />
+        <animate id="animateFace_b_16" xlink:href="#lineFace_b_m3" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.2" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_17" xlink:href="#lineFace_b_m8" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_16.end - 0.1" dur="0.15" fill="freeze" />
+        <animate id="animateFace_b_18" xlink:href="#lineFace_b_m11" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_17.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_19" xlink:href="#lineFace_b_m13" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_18.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_20" xlink:href="#lineFace_b_d7" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_19.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_21" xlink:href="#lineFace_b_m14" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.5" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_22" xlink:href="#lineFace_b_d8" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_21.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_23" xlink:href="#lineFace_b_m15" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.6" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_24" xlink:href="#lineFace_b_d9" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_23.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_25" xlink:href="#lineFace_b_d11" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.65" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_26" xlink:href="#lineFace_b_d10" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_25.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_27" xlink:href="#lineFace_b_m16" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.7" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_28" xlink:href="#lineFace_b_d12" attributeName="stroke-dashoffset" to="0" begin="animateFace_b_27.end - 0.1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_29" xlink:href="#lineFace_b_h1" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.8" dur="0.4" fill="freeze" />
+        <animate id="animateFace_b_30" xlink:href="#lineFace_b_h2" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.85" dur="0.35" fill="freeze" />
+        <animate id="animateFace_b_31" xlink:href="#lineFace_b_h3" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.9" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_32" xlink:href="#lineFace_b_h4" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.95" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_33" xlink:href="#lineFace_b_m23" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 1" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_34" xlink:href="#lineFace_b_m22" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 1.05" dur="0.25" fill="freeze" />
+        <animate id="animateFace_b_35" xlink:href="#lineFace_b_m21" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 1.1" dur="0.2" fill="freeze" />
+        <animate id="animateFace_b_36" xlink:href="#lineFace_b_m17" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.8" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_37" xlink:href="#lineFace_b_m18" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.85" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_38" xlink:href="#lineFace_b_m19" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.9" dur="0.3" fill="freeze" />
+        <animate id="animateFace_b_39" xlink:href="#lineFace_b_m20" attributeName="stroke-dashoffset" to="0" begin="initFaceB.begin + 0.95" dur="0.3" fill="freeze" />
+
+        <animate id="endFaceB" begin="animateFace_b_39.end" dur="0"/>
     </defs>
+
+    <path id="initAnimEl" d="M0,0l0,0">
+        <animate id="initAnim" begin="indefinite" dur="1"/>
+    </path>
 </svg>

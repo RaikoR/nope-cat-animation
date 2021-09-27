@@ -45,31 +45,33 @@
         </mask>
 
         <!-- whisker animations -->
-        <animate id="animate_whisker_r1_in" xlink:href="#whisker_r_up" attributeName="stroke-dashoffset" dur="0.5" begin="0.7" repeatCount="1"
+        <animate id="initWhiskers" begin="endFaceB.begin - 0.6" dur="0" />
+
+        <animate id="animate_whisker_r1_in" xlink:href="#whisker_r_up" attributeName="stroke-dashoffset" dur="0.5" begin="initWhiskers.begin + 0.5" repeatCount="1"
                  values="130.48; 0" keyTimes="0;1" calcMode="spline" keySplines=".23,.01,1,1" fill="freeze"/>
-        <animate id="animate_whisker_r2_in" xlink:href="#whisker_r_down" attributeName="stroke-dashoffset" dur="0.5" begin="0.7" repeatCount="1"
+        <animate id="animate_whisker_r2_in" xlink:href="#whisker_r_down" attributeName="stroke-dashoffset" dur="0.5" begin="initWhiskers.begin + 0.5" repeatCount="1"
                  values="130.48; 0" keyTimes="0;1" calcMode="spline" keySplines=".23,.01,1,1" fill="freeze"/>
-        <animate id="anim_whisker_r1" xlink:href="#whisker_r_up" attributeName="d" dur="1.2" begin="animate_whisker_r1_in.end - .72s" repeatCount="indefinite"
+        <animate id="anim_whisker_r1" xlink:href="#whisker_r_up" attributeName="d" dur="1.2" begin="animate_whisker_r1_in.end - .52s" repeatCount="indefinite"
                  values="
-                 M613.93,395.84c0,0 0,0 0,0c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69;
-                 M613.93,404.975c0,0 15.4,-9.34 30.8,-9.34c30.71,0 30.71,18.27 61.42,18.27c15.4,0 30.8,-9.34 30.8,-9.34;
-                 M613.93,414.11c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27c0,0 0,0 0,0;
-                 M613.93,414.11c0,0 0,0 0,0c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27;
-                 M613.93,404.975c0,0 15.4,9.34 30.8,9.34c30.8,0 30.8,-18.69 61.59,-18.69c15.4,0 30.8,9.34 30.8,9.34;
-                 M613.93,395.84c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69c0,0 0,0 0,0;"
+                 M613.93,385.84c0,0 0,0 0,0c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69;
+                 M613.93,394.975c0,0 15.4,-9.34 30.8,-9.34c30.71,0 30.71,18.27 61.42,18.27c15.4,0 30.8,-9.34 30.8,-9.34;
+                 M613.93,404.11c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27c0,0 0,0 0,0;
+                 M613.93,404.11c0,0 0,0 0,0c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27;
+                 M613.93,394.975c0,0 15.4,9.34 30.8,9.34c30.8,0 30.8,-18.69 61.59,-18.69c15.4,0 30.8,9.34 30.8,9.34;
+                 M613.93,385.84c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69c0,0 0,0 0,0;"
                  keyTimes="0;0.25;0.5;0.5;0.75;1"/>
-        <animate id="anim_whisker_r2" xlink:href="#whisker_r_down" attributeName="d" dur="1.2" begin="animate_whisker_r1_in.end - .72s" repeatCount="indefinite"
+        <animate id="anim_whisker_r2" xlink:href="#whisker_r_down" attributeName="d" dur="1.2" begin="animate_whisker_r1_in.end - .52s" repeatCount="indefinite"
                  values="
-                 M613.93,417.86c0,0 0,0 0,0c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69;
-                 M613.93,427.2c0,0 15.4,-9.34 30.8,-9.34c30.71,0 30.71,18.27 61.42,18.27c15.4,0 30.8,-9.34 30.8,-9.34;
-                 M613.93,436.54c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27c0,0 0,0 0,0;
-                 M613.93,436.54c0,0 0,0 0,0c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27;
-                 M613.93,427.2c0,0 15.4,9.34 30.8,9.34c30.8,0 30.8,-18.69 61.59,-18.69c15.4,0 30.8,9.34 30.8,9.34;
-                 M613.93,417.86c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69c0,0 0,0 0,0;"
+                 M613.93,407.86c0,0 0,0 0,0c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69;
+                 M613.93,417.2c0,0 15.4,-9.34 30.8,-9.34c30.71,0 30.71,18.27 61.42,18.27c15.4,0 30.8,-9.34 30.8,-9.34;
+                 M613.93,426.54c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27c0,0 0,0 0,0;
+                 M613.93,426.54c0,0 0,0 0,0c30.8,0 30.8,-18.69 61.59,-18.69c30.71,0 30.71,18.27 61.42,18.27;
+                 M613.93,417.2c0,0 15.4,9.34 30.8,9.34c30.8,0 30.8,-18.69 61.59,-18.69c15.4,0 30.8,9.34 30.8,9.34;
+                 M613.93,407.86c30.71,0 30.71,18.27 61.42,18.27c30.8,0 30.8,-18.69 61.59,-18.69c0,0 0,0 0,0;"
                  keyTimes="0;0.25;0.5;0.5;0.75;1"/>
-        <animate id="animate_whisker_l1_in" xlink:href="#whisker_l_up" attributeName="stroke-dashoffset" dur="1.2" begin="0" repeatCount="1"
+        <animate id="animate_whisker_l1_in" xlink:href="#whisker_l_up" attributeName="stroke-dashoffset" dur="1.2" begin="initWhiskers.begin" repeatCount="1"
                  values="-328.45; 0" keyTimes="0;1" calcMode="spline" keySplines=".23,.01,1,1" fill="freeze"/>
-        <animate id="animate_whisker_l2_in" xlink:href="#whisker_l_down" attributeName="stroke-dashoffset" dur="1.2" begin="0" repeatCount="1"
+        <animate id="animate_whisker_l2_in" xlink:href="#whisker_l_down" attributeName="stroke-dashoffset" dur="1.2" begin="initWhiskers.begin" repeatCount="1"
                  values="-328.45; 0" keyTimes="0;1" calcMode="spline" keySplines=".23,.01,1,1" fill="freeze"/>
         <animate id="anim_whisker_l1" xlink:href="#whisker_l_up" attributeName="d" dur="1.2" begin="animate_whisker_l1_in.end - 0.1" repeatCount="indefinite"
                  values="M193.56,385.16c30.78,0 30.78,19.49 61.56,19.49c30.78,0 30.78,-19.49 61.56,-19.49c30.78,0 30.78,19.49 61.56,19.49c30.78,0 30.78,-19.49 61.56,-19.49c30.78,0 30.78,19.49 61.56,19.49c0,0 0,0 0,0;
@@ -88,147 +90,143 @@
         M193.56,407c0,0 0,0 0,0c30.78,0 30.78,19.49 61.56,19.49c30.78,0 30.78,-19.49 61.56,-19.49c30.78,0 30.78,19.49 61.56,19.49c30.78,0 30.78,-19.49 61.56,-19.49c30.78,0 30.78,19.49 61.56,19.49" keyTimes="0;0.25;0.5;0.5;0.75;1"/>
     </defs>
 
-    <g class="has-events">
-        <text x="20" y="20" fill="white" onclick="document.getElementById('animate_cir_5').beginElement();">spots</text>
-    </g>
-
     <!-- HEAD -->
     <!-- EAR RIGHT -->
     <g id="earRight">
-        <path id="lineEar_r1" class="s-high s-anim" d="M543.63,51.14S538,40.44,525.05,41s-26.47,18.31-26.47,18.31"/>
-        <path id="lineEar_r2" class="s-high s-anim" d="M520.26,56.77a11.08,11.08,0,0,1,12.67,0"/>
-        <path id="lineEar_r3" class="s-high s-anim" d="M463.39,102.86s18.11-22.22,26.7-32.17"/>
-        <path id="lineEar_r4" class="s-high s-anim" d="M485.09,103.92s18.82-29.81,23.46-36.66"/>
-        <line id="lineEar_r5" class="s-high s-anim" x1="502.63" y1="105.2" x2="512.76" y2="83.5"/>
-        <line id="lineEar_r6" class="s-high s-anim" x1="517.91" y1="109.37" x2="527.76" y2="71.27"/>
-        <line id="lineEar_r7" class="s-high s-anim" x1="538" y1="83.5" x2="533.77" y2="115.42"/>
-        <line id="lineEar_r8" class="s-high s-anim" x1="548.42" y1="62.4" x2="550.67" y2="128.57"/>
+        <path id="lineEar_r1" class="s-high s-anim" d="M543.63,51.14S538,40.44,525.05,41s-26.47,18.31-26.47,18.31" stroke-dasharray="55.28" stroke-dashoffset="-55.28"/>
+        <path id="lineEar_r2" class="s-high s-anim" d="M520.26,56.77a11.08,11.08,0,0,1,12.67,0" stroke-dasharray="13.49" stroke-dashoffset="13.49"/>
+        <path id="lineEar_r3" class="s-high s-anim" d="M463.39,102.86s18.11-22.22,26.7-32.17" stroke-dasharray="41.81" stroke-dashoffset="41.81"/>
+        <path id="lineEar_r4" class="s-high s-anim" d="M485.09,103.92s18.82-29.81,23.46-36.66" stroke-dasharray="43.53" stroke-dashoffset="43.53"/>
+        <line id="lineEar_r5" class="s-high s-anim" x1="502.63" y1="105.2" x2="512.76" y2="83.5" stroke-dasharray="23.95" stroke-dashoffset="23.95"/>
+        <line id="lineEar_r6" class="s-high s-anim" x1="517.91" y1="109.37" x2="527.76" y2="71.27" stroke-dasharray="39.36" stroke-dashoffset="39.36"/>
+        <line id="lineEar_r7" class="s-high s-anim" x1="538" y1="83.5" x2="533.77" y2="115.42" stroke-dasharray="32.20" stroke-dashoffset="32.20"/>
+        <line id="lineEar_r8" class="s-high s-anim" x1="548.42" y1="62.4" x2="550.67" y2="128.57" stroke-dasharray="66.21" stroke-dashoffset="66.21"/>
     </g>
     <g id="earLeft">
-        <path id="lineEar_f1" class="s-dark s-anim" d="M302,236.17s-14.54-22.82-17.71-52.58"/>
-        <path id="lineEar_f2" class="s-dark s-anim" d="M282,169.11s-1.81-29.84,0-47.86"/>
-        <path id="lineEar_f3" class="s-dark s-anim" d="M284.78,103.23S292.1,68.88,298,59.87"/>
-        <path id="lineEar_f4" class="s-dark s-anim" d="M306.56,52s19-20.65,39.23,16.7"/>
-        <path id="lineEar_f5" class="s-dark s-anim" d="M296.73,168s1.39,14.53,5.28,33.25"/>
-        <path id="lineEar_f6" class="s-dark s-anim" d="M299.52,105.7s-3.34,9-3.37,46.11"/>
-        <path id="lineEar_f7" class="s-dark s-anim" d="M320.37,62.55s-13.81,2.25-18.73,29.14"/>
-        <path id="lineEar_f8" class="s-dark s-anim" d="M311.85,151.16a439.19,439.19,0,0,0,6.83,59.61"/>
-        <path id="lineEar_f9" class="s-dark s-anim" d="M311.33,137.75s-.06-5.91.87-15.84"/>
-        <path id="lineEar_f10" class="s-dark s-anim" d="M336.82,77.78s-9.21-6-16.33,5.35c-4.09,6.48-6.41,22.45-6.76,25.2"/>
-        <path id="lineEar_f11" class="s-dark s-anim" d="M349.4,84.23s4.41,2.11,11.17,16.47"/>
-        <path id="lineEar_f12" class="s-dark s-anim" d="M366.63,113.37s9.31,17.54,17.95,44.6"/>
-        <path id="lineEar_f13" class="s-dark s-anim" d="M329.12,161.59s-.42,14.92,4.58,44"/>
-        <path id="lineEar_f14" class="s-dark s-anim" d="M327.85,109.6s1-7.75,5.36-10.3c5-2.94,11.33-1.83,18.3,16"/>
-        <line id="lineEar_f15" class="s-dark s-anim" x1="359.68" y1="132.51" x2="366.63" y2="173.06"/>
-        <path id="lineEar_f16" class="s-dark s-anim" d="M345.23,158s1.62,18.64,4.28,36.29"/>
-        <line id="lineEar_f18" class="s-med s-anim" x1="329.1" y1="128.77" x2="342.54" y2="142.57"/>
-        <line id="lineEar_f18" class="s-med s-anim" x1="342.54" y1="128.77" x2="329.1" y2="142.57"/>
+        <path id="lineEar_f1" class="s-dark s-anim" d="M302,236.17s-14.54-22.82-17.71-52.58" stroke-dasharray="55.89" stroke-dashoffset="55.89"/>
+        <path id="lineEar_f2" class="s-dark s-anim" d="M282,169.11s-1.81-29.84,0-47.86" stroke-dasharray="47.90" stroke-dashoffset="47.90"/>
+        <path id="lineEar_f3" class="s-dark s-anim" d="M284.78,103.23S292.1,68.88,298,59.87" stroke-dasharray="45.47" stroke-dashoffset="45.47"/>
+        <path id="lineEar_f4" class="s-dark s-anim" d="M306.56,52s19-20.65,39.23,16.7" stroke-dasharray="50.70" stroke-dashoffset="50.70"/>
+        <path id="lineEar_f5" class="s-dark s-anim" d="M296.73,168s1.39,14.53,5.28,33.25" stroke-dasharray="33.68" stroke-dashoffset="-33.68"/>
+        <path id="lineEar_f6" class="s-dark s-anim" d="M299.52,105.7s-3.34,9-3.37,46.11" stroke-dasharray="46.34" stroke-dashoffset="-46.34"/>
+        <path id="lineEar_f7" class="s-dark s-anim" d="M320.37,62.55s-13.81,2.25-18.73,29.14" stroke-dasharray="36.36" stroke-dashoffset="-36.36"/>
+        <path id="lineEar_f8" class="s-dark s-anim" d="M311.85,151.16a439.19,439.19,0,0,0,6.83,59.61" stroke-dasharray="60.05" stroke-dashoffset="-60.05"/>
+        <path id="lineEar_f9" class="s-dark s-anim" d="M311.33,137.75s-.06-5.91.87-15.84" stroke-dasharray="15.87" stroke-dashoffset="15.87"/>
+        <path id="lineEar_f10" class="s-dark s-anim" d="M336.82,77.78s-9.21-6-16.33,5.35c-4.09,6.48-6.41,22.45-6.76,25.2" stroke-dasharray="45.51" stroke-dashoffset="-45.51"/>
+        <path id="lineEar_f11" class="s-dark s-anim" d="M349.4,84.23s4.41,2.11,11.17,16.47" stroke-dasharray="20.09" stroke-dashoffset="20.09"/>
+        <path id="lineEar_f12" class="s-dark s-anim" d="M366.63,113.37s9.31,17.54,17.95,44.6" stroke-dasharray="48.13" stroke-dashoffset="48.13"/>
+        <path id="lineEar_f13" class="s-dark s-anim" d="M329.12,161.59s-.42,14.92,4.58,44" stroke-dasharray="44.29" stroke-dashoffset="-44.29"/>
+        <path id="lineEar_f14" class="s-dark s-anim" d="M327.85,109.6s1-7.75,5.36-10.3c5-2.94,11.33-1.83,18.3,16" stroke-dasharray="39.78" stroke-dashoffset="39.78"/>
+        <line id="lineEar_f15" class="s-dark s-anim" x1="359.68" y1="132.51" x2="366.63" y2="173.06" stroke-dasharray="41.15" stroke-dashoffset="41.15"/>
+        <path id="lineEar_f16" class="s-dark s-anim" d="M345.23,158s1.62,18.64,4.28,36.29" stroke-dasharray="36.55" stroke-dashoffset="-36.55"/>
+        <line id="lineEar_f17" class="s-med s-anim" x1="329.1" y1="128.77" x2="342.54" y2="142.57" stroke-dasharray="19.27" stroke-dashoffset="19.27"/>
+        <line id="lineEar_f18" class="s-med s-anim" x1="342.54" y1="128.77" x2="329.1" y2="142.57" stroke-dasharray="19.27" stroke-dashoffset="19.27"/>
     </g>
 
     <g id="faceTop">
-        <path id="lineFace_t_m1" class="s-med s-anim" d="M309.43,248.1a96.93,96.93,0,0,0,18.49,19"/>
-        <path id="lineFace_t_m2" class="s-med s-anim" d="M323.36,227.83s7.83,20,19.36,31.33"/>
-        <path id="lineFace_t_m3" class="s-med s-anim" d="M341.58,212.3s1.61,17.17,10.5,30.66"/>
-        <path id="lineFace_t_m4" class="s-med s-anim" d="M359.07,201.83a68.15,68.15,0,0,0,5.08,27.39"/>
-        <path id="lineFace_t_m5" class="s-med s-anim" d="M374.63,187.58a67.79,67.79,0,0,0,4,27.4"/>
-        <path id="lineFace_t_m6" class="s-med s-anim" d="M392.87,175.6s0,16.54,3.19,28.91"/>
-        <path id="lineFace_t_m7" class="s-med s-anim" d="M393.9,124s21.89,32.52,21.89,76.25"/>
-        <path id="lineFace_t_m8" class="s-med s-anim" d="M412.68,119.83a83.9,83.9,0,0,1,14.72,23.89"/>
-        <path id="lineFace_t_m9" class="s-med s-anim" d="M432,157.26a141.57,141.57,0,0,1,3.91,44"/>
-        <path id="lineFace_t_m10" class="s-med s-anim" d="M431.19,117.49s10.76,8.77,20.15,37.67"/>
-        <path id="lineFace_t_m11" class="s-med s-anim" d="M454.21,171.93s2.81,12.66,2.7,32.35"/>
-        <path id="lineFace_t_m12" class="s-med s-anim" d="M452.72,117.29s17.46,17.54,26.91,50.67"/>
-        <path id="lineFace_t_m13" class="s-med s-anim" d="M472.49,182.25a215.11,215.11,0,0,1,3.72,26.66"/>
-        <path id="lineFace_t_m14" class="s-med s-anim" d="M492.51,181.13s5.57,18.77,5.13,37.54"/>
-        <path id="lineFace_t_m15" class="s-med s-anim" d="M476.21,118.49a255.73,255.73,0,0,1,19.43,32.67"/>
-        <path id="lineFace_t_m16" class="s-med s-anim" d="M507.13,166.06S515,185.66,518.39,205"/>
-        <path id="lineFace_t_m17" class="s-med s-anim" d="M501.45,121.88s10.49,10,24,35.38"/>
-        <path id="lineFace_t_m18" class="s-med s-anim" d="M532.87,171.93s5.33,13.89,6.64,25.53"/>
-        <path id="lineFace_t_m19" class="s-med s-anim" d="M531.43,133.83s12.63,11.44,23.34,38.1"/>
-        <path id="lineFace_t_m20" class="s-med s-anim" d="M558.8,185.59s2.32,10,2.32,14.6"/>
-        <path id="lineFace_t_m21" class="s-med s-anim" d="M559.84,145.78S581,156.16,596.4,174.12"/>
-        <path id="lineFace_t_m22" class="s-med s-anim" d="M573.05,176.25A101.54,101.54,0,0,1,584.18,204"/>
-        <polyline id="lineFace_t_m23" class="s-med s-anim" points="559.7 265.46 553.72 274.92 546.29 266.27"/>
-        <path id="lineFace_t_m24" class="s-med s-anim" d="M579.21,267.65A125.74,125.74,0,0,0,577.05,243"/>
-        <path id="lineFace_t_m25" class="s-med s-anim" d="M589.87,221.47c2.76,8.63,3.92,16,5.53,32"/>
-        <path id="lineFace_t_m26" class="s-med s-anim" d="M601.25,203s10.08,15.44,12,40.43"/>
-        <path id="lineFace_t_m27" class="s-med s-anim" d="M604.75,185s21.44,27.21,25.36,54.09"/>
-        <path id="lineFace_t_h1" class="s-high s-anim" d="M370.44,293.19s-17.08-4.92-26-14.95"/>
-        <path id="lineFace_t_h2" class="s-high s-anim" d="M380.26,278.8s-17.11-11.74-20.58-25.63"/>
-        <path id="lineFace_t_h3" class="s-high s-anim" d="M393.9,265.78s-13.64-15.61-16.64-30.9"/>
-        <path id="lineFace_t_h4" class="s-high s-anim" d="M410.42,256.16s-11.33-11.61-13.36-34.49"/>
-        <path id="lineFace_t_h5" class="s-high s-anim" d="M429.44,249.27s-9.63-11.47-10.76-32.21"/>
-        <path id="lineFace_t_h6" class="s-high s-anim" d="M448.31,246s-7-12-6.14-29.78"/>
-        <path id="lineFace_t_h7" class="s-high s-anim" d="M468.56,248.65a56.34,56.34,0,0,1-3.2-27.29"/>
-        <path id="lineFace_t_h8" class="s-high s-anim" d="M484.19,227.94c-1.13,5.26-.25,18.33,4.36,28.35"/>
-        <path id="lineFace_t_h9" class="s-high s-anim" d="M503.25,238.7c-.43,5.77,0,19.44,4.78,28"/>
-        <path id="lineFace_t_h10" class="s-high s-anim" d="M523.73,253.17A93.82,93.82,0,0,0,525.42,270a62,62,0,0,0,6.18,16.81"/>
+        <path id="lineFace_t_m1" class="s-med s-anim" d="M309.43,248.1a96.93,96.93,0,0,0,18.49,19" stroke-dasharray="26.60" stroke-dashoffset="-26.60"/>
+        <path id="lineFace_t_m2" class="s-med s-anim" d="M323.36,227.83s7.83,20,19.36,31.33" stroke-dasharray="37.05" stroke-dashoffset="-37.05"/>
+        <path id="lineFace_t_m3" class="s-med s-anim" d="M341.58,212.3s1.61,17.17,10.5,30.66" stroke-dasharray="32.68" stroke-dashoffset="-32.68"/>
+        <path id="lineFace_t_m4" class="s-med s-anim" d="M359.07,201.83a68.15,68.15,0,0,0,5.08,27.39" stroke-dasharray="28.05" stroke-dashoffset="-28.05"/>
+        <path id="lineFace_t_m5" class="s-med s-anim" d="M374.63,187.58a67.79,67.79,0,0,0,4,27.4" stroke-dasharray="27.89" stroke-dashoffset="-27.89"/>
+        <path id="lineFace_t_m6" class="s-med s-anim" d="M392.87,175.6s0,16.54,3.19,28.91" stroke-dasharray="29.15" stroke-dashoffset="-29.15"/>
+        <path id="lineFace_t_m7" class="s-med s-anim" d="M393.9,124s21.89,32.52,21.89,76.25" stroke-dasharray="80.31" stroke-dashoffset="-80.31"/>
+        <path id="lineFace_t_m8" class="s-med s-anim" d="M412.68,119.83a83.9,83.9,0,0,1,14.72,23.89" stroke-dasharray="28.19" stroke-dashoffset="-28.19"/>
+        <path id="lineFace_t_m9" class="s-med s-anim" d="M432,157.26a141.57,141.57,0,0,1,3.91,44" stroke-dasharray="44.35" stroke-dashoffset="-44.35"/>
+        <path id="lineFace_t_m10" class="s-med s-anim" d="M431.19,117.49s10.76,8.77,20.15,37.67" stroke-dasharray="43.10" stroke-dashoffset="-43.10"/>
+        <path id="lineFace_t_m11" class="s-med s-anim" d="M454.21,171.93s2.81,12.66,2.7,32.35" stroke-dasharray="32.52" stroke-dashoffset="-32.52"/>
+        <path id="lineFace_t_m12" class="s-med s-anim" d="M452.72,117.29s17.46,17.54,26.91,50.67" stroke-dasharray="57.86" stroke-dashoffset="-57.86"/>
+        <path id="lineFace_t_m13" class="s-med s-anim" d="M472.49,182.25a215.11,215.11,0,0,1,3.72,26.66" stroke-dasharray="26.94" stroke-dashoffset="-26.94"/>
+        <path id="lineFace_t_m14" class="s-med s-anim" d="M492.51,181.13s5.57,18.77,5.13,37.54" stroke-dasharray="38.02" stroke-dashoffset="-38.02"/>
+        <path id="lineFace_t_m15" class="s-med s-anim" d="M476.21,118.49a255.73,255.73,0,0,1,19.43,32.67" stroke-dasharray="38.05" stroke-dashoffset="-38.05"/>
+        <path id="lineFace_t_m16" class="s-med s-anim" d="M507.13,166.06S515,185.66,518.39,205" stroke-dasharray="40.60" stroke-dashoffset="-40.60"/>
+        <path id="lineFace_t_m17" class="s-med s-anim" d="M501.45,121.88s10.49,10,24,35.38" stroke-dasharray="42.88" stroke-dashoffset="-42.88"/>
+        <path id="lineFace_t_m18" class="s-med s-anim" d="M532.87,171.93s5.33,13.89,6.64,25.53" stroke-dasharray="26.44" stroke-dashoffset="-26.44"/>
+        <path id="lineFace_t_m19" class="s-med s-anim" d="M531.43,133.83s12.63,11.44,23.34,38.1" stroke-dasharray="44.96" stroke-dashoffset="-44.96"/>
+        <path id="lineFace_t_m20" class="s-med s-anim" d="M558.8,185.59s2.32,10,2.32,14.6" stroke-dasharray="14.81" stroke-dashoffset="-14.81"/>
+        <path id="lineFace_t_m21" class="s-med s-anim" d="M559.84,145.78S581,156.16,596.4,174.12" stroke-dasharray="46.52" stroke-dashoffset="-46.52"/>
+        <path id="lineFace_t_m22" class="s-med s-anim" d="M573.05,176.25A101.54,101.54,0,0,1,584.18,204" stroke-dasharray="30.01" stroke-dashoffset="-30.01"/>
+        <polyline id="lineFace_t_m23" class="s-med s-anim" points="559.7 265.46 553.72 274.92 546.29 266.27" stroke-dasharray="22.60" stroke-dashoffset="-22.60"/>
+        <path id="lineFace_t_m24" class="s-med s-anim" d="M579.21,267.65A125.74,125.74,0,0,0,577.05,243" stroke-dasharray="24.78" stroke-dashoffset="24.78"/>
+        <path id="lineFace_t_m25" class="s-med s-anim" d="M589.87,221.47c2.76,8.63,3.92,16,5.53,32" stroke-dasharray="32.54" stroke-dashoffset="-32.54"/>
+        <path id="lineFace_t_m26" class="s-med s-anim" d="M601.25,203s10.08,15.44,12,40.43" stroke-dasharray="42.53" stroke-dashoffset="-42.53"/>
+        <path id="lineFace_t_m27" class="s-med s-anim" d="M604.75,185s21.44,27.21,25.36,54.09" stroke-dasharray="60.31" stroke-dashoffset="-60.31"/>
+        <path id="lineFace_t_h1" class="s-high s-anim" d="M370.44,293.19s-17.08-4.92-26-14.95" stroke-dasharray="30.32" stroke-dashoffset="30.32"/>
+        <path id="lineFace_t_h2" class="s-high s-anim" d="M380.26,278.8s-17.11-11.74-20.58-25.63" stroke-dasharray="33.47" stroke-dashoffset="33.47"/>
+        <path id="lineFace_t_h3" class="s-high s-anim" d="M393.9,265.78s-13.64-15.61-16.64-30.9" stroke-dasharray="35.43" stroke-dashoffset="35.43"/>
+        <path id="lineFace_t_h4" class="s-high s-anim" d="M410.42,256.16s-11.33-11.61-13.36-34.49" stroke-dasharray="37.58" stroke-dashoffset="37.58"/>
+        <path id="lineFace_t_h5" class="s-high s-anim" d="M429.44,249.27s-9.63-11.47-10.76-32.21" stroke-dasharray="34.44" stroke-dashoffset="34.44"/>
+        <path id="lineFace_t_h6" class="s-high s-anim" d="M448.31,246s-7-12-6.14-29.78" stroke-dasharray="30.75" stroke-dashoffset="30.75"/>
+        <path id="lineFace_t_h7" class="s-high s-anim" d="M468.56,248.65a56.34,56.34,0,0,1-3.2-27.29" stroke-dasharray="27.76" stroke-dashoffset="27.76"/>
+        <path id="lineFace_t_h8" class="s-high s-anim" d="M484.19,227.94c-1.13,5.26-.25,18.33,4.36,28.35" stroke-dasharray="29.04" stroke-dashoffset="-29.04"/>
+        <path id="lineFace_t_h9" class="s-high s-anim" d="M503.25,238.7c-.43,5.77,0,19.44,4.78,28" stroke-dasharray="28.73" stroke-dashoffset="-28.73"/>
+        <path id="lineFace_t_h10" class="s-high s-anim" d="M523.73,253.17A93.82,93.82,0,0,0,525.42,270a62,62,0,0,0,6.18,16.81" stroke-dasharray="34.91" stroke-dashoffset="-34.91"/>
     </g>
     <g id="faceSide">
-        <path id="lineFace_s_d1" class="s-dark s-anim" d="M268.45,175.61a36.59,36.59,0,0,0,5.6,15"/>
-        <path id="lineFace_s_d2" class="s-dark s-anim" d="M257.7,196.46A57.51,57.51,0,0,0,275,213.35"/>
-        <path id="lineFace_s_d3" class="s-dark s-anim" d="M249.5,216.25s10.6,13.61,30.46,24.16"/>
-        <path id="lineFace_s_d4" class="s-dark s-anim" d="M242.74,237.88s20.46,19.64,47.67,31.28"/>
-        <path id="lineFace_s_d5" class="s-dark s-anim" d="M239.15,260.91S266.5,283.8,298,291.65"/>
-        <path id="lineFace_s_d6" class="s-dark s-anim" d="M236.11,283.8s17.39,11,33.12,18.78"/>
-        <path id="lineFace_s_d7" class="s-dark s-anim" d="M236.11,307.64A176.77,176.77,0,0,0,282,331.11"/>
-        <path id="lineFace_s_d8" class="s-dark s-anim" d="M236,333.11s17.69,10.51,30.05,14.64"/>
-        <path id="lineFace_s_d9" class="s-dark s-anim" d="M282,354s15.59,8.64,38.68,11.64"/>
-        <path id="lineFace_s_d10" class="s-dark s-anim" d="M236.77,358.75S272.65,379.43,307,384.3c1.12.16,2.26.3,3.4.43"/>
-        <path id="lineFace_s_d11" class="s-dark s-anim" d="M246.81,385.35s18.12,7.47,35.15,9.57"/>
-        <path id="lineFace_s_m1" class="s-med s-anim" d="M304,273.44s11.27,6.36,22.78,9.32"/>
-        <path id="lineFace_s_m2" class="s-med s-anim" d="M316.81,296.81a124.32,124.32,0,0,0,28,3.75"/>
-        <path id="lineFace_s_m3" class="s-med s-anim" d="M287.16,310.45s16.46,8.89,35.92,8.89"/>
-        <path id="lineFace_s_m4" class="s-med s-anim" d="M301.68,337.11s19,7.88,37.91,6"/>
-        <path id="lineFace_s_m5" class="s-med s-anim" d="M336.4,365.64s9.86.57,15.63-2.11"/>
-        <path id="lineFace_s_m6" class="s-med s-anim" d="M325.24,385.65s38.76-.3,53.68-7.79"/>
-        <path id="lineFace_s_m7" class="s-med s-anim" d="M378.21,394.78a78.89,78.89,0,0,0,29.25-14.64"/>
-        <path id="lineFace_s_m8" class="s-med s-anim" d="M436.08,356.41s-3.1,15.43-11.83,28.94"/>
-        <path id="lineFace_s_h1" class="s-high s-anim" d="M345.23,316.84s15,2.4,28.9-4.39"/>
-        <path id="lineFace_s_h2" class="s-high s-anim" d="M358,337.11s22.64-3.41,30.59-11.28"/>
-        <path id="lineFace_s_h3" class="s-high s-anim" d="M366.63,358.51s22.12-1.38,37.21-19.4"/>
-        <path id="lineFace_s_h4" class="s-high s-anim" d="M400.41,368.64a50,50,0,0,0,18.27-19.23"/>
+        <path id="lineFace_s_d1" class="s-dark s-anim" d="M268.45,175.61a36.59,36.59,0,0,0,5.6,15" stroke-dasharray="16.14" stroke-dashoffset="-16.14"/>
+        <path id="lineFace_s_d2" class="s-dark s-anim" d="M257.7,196.46A57.51,57.51,0,0,0,275,213.35" stroke-dasharray="24.36" stroke-dashoffset="-24.36"/>
+        <path id="lineFace_s_d3" class="s-dark s-anim" d="M249.5,216.25s10.6,13.61,30.46,24.16" stroke-dasharray="39.11" stroke-dashoffset="-39.11"/>
+        <path id="lineFace_s_d4" class="s-dark s-anim" d="M242.74,237.88s20.46,19.64,47.67,31.28" stroke-dasharray="57.27" stroke-dashoffset="-57.27"/>
+        <path id="lineFace_s_d5" class="s-dark s-anim" d="M239.15,260.91S266.5,283.8,298,291.65" stroke-dasharray="66.87" stroke-dashoffset="-66.87"/>
+        <path id="lineFace_s_d6" class="s-dark s-anim" d="M236.11,283.8s17.39,11,33.12,18.78" stroke-dasharray="38.09" stroke-dashoffset="-38.09"/>
+        <path id="lineFace_s_d7" class="s-dark s-anim" d="M236.11,307.64A176.77,176.77,0,0,0,282,331.11" stroke-dasharray="51.73" stroke-dashoffset="-51.73"/>
+        <path id="lineFace_s_d8" class="s-dark s-anim" d="M236,333.11s17.69,10.51,30.05,14.64" stroke-dasharray="33.48" stroke-dashoffset="-33.48"/>
+        <path id="lineFace_s_d9" class="s-dark s-anim" d="M282,354s15.59,8.64,38.68,11.64" stroke-dasharray="40.58" stroke-dashoffset="-40.58"/>
+        <path id="lineFace_s_d10" class="s-dark s-anim" d="M236.77,358.75S272.65,379.43,307,384.3c1.12.16,2.26.3,3.4.43" stroke-dasharray="78.54" stroke-dashoffset="-78.54"/>
+        <path id="lineFace_s_d11" class="s-dark s-anim" d="M246.81,385.35s18.12,7.47,35.15,9.57" stroke-dasharray="36.52" stroke-dashoffset="-36.52"/>
+        <path id="lineFace_s_m1" class="s-med s-anim" d="M304,273.44s11.27,6.36,22.78,9.32" stroke-dasharray="24.67" stroke-dashoffset="-24.67"/>
+        <path id="lineFace_s_m2" class="s-med s-anim" d="M316.81,296.81a124.32,124.32,0,0,0,28,3.75" stroke-dasharray="28.31" stroke-dashoffset="-28.31"/>
+        <path id="lineFace_s_m3" class="s-med s-anim" d="M287.16,310.45s16.46,8.89,35.92,8.89" stroke-dasharray="37.32" stroke-dashoffset="-37.32"/>
+        <path id="lineFace_s_m4" class="s-med s-anim" d="M301.68,337.11s19,7.88,37.91,6" stroke-dasharray="38.71" stroke-dashoffset="-38.71"/>
+        <path id="lineFace_s_m5" class="s-med s-anim" d="M336.4,365.64s9.86.57,15.63-2.11" stroke-dasharray="15.90" stroke-dashoffset="-15.90"/>
+        <path id="lineFace_s_m6" class="s-med s-anim" d="M325.24,385.65s38.76-.3,53.68-7.79" stroke-dasharray="54.56" stroke-dashoffset="-54.56"/>
+        <path id="lineFace_s_m7" class="s-med s-anim" d="M378.21,394.78a78.89,78.89,0,0,0,29.25-14.64" stroke-dasharray="32.95" stroke-dashoffset="-32.95"/>
+        <path id="lineFace_s_m8" class="s-med s-anim" d="M436.08,356.41s-3.1,15.43-11.83,28.94" stroke-dasharray="31.42" stroke-dashoffset="31.42"/>
+        <path id="lineFace_s_h1" class="s-high s-anim" d="M345.23,316.84s15,2.4,28.9-4.39" stroke-dasharray="29.62" stroke-dashoffset="-29.62"/>
+        <path id="lineFace_s_h2" class="s-high s-anim" d="M358,337.11s22.64-3.41,30.59-11.28" stroke-dasharray="32.99" stroke-dashoffset="-32.99"/>
+        <path id="lineFace_s_h3" class="s-high s-anim" d="M366.63,358.51s22.12-1.38,37.21-19.4" stroke-dasharray="42.99" stroke-dashoffset="-42.99"/>
+        <path id="lineFace_s_h4" class="s-high s-anim" d="M400.41,368.64a50,50,0,0,0,18.27-19.23" stroke-dasharray="26.85" stroke-dashoffset="-26.85"/>
     </g>
     <g id="faceBottom">
-        <path id="lineFace_b_d1" class="s-dark s-anim" d="M503.53,348.21c9.57-2.69,19.35-10.32,23.14-18.1"/>
-        <path id="lineFace_b_d2" class="s-dark s-anim" d="M505.29,367.56a52.24,52.24,0,0,0,25.08-16.63"/>
-        <path id="lineFace_b_d3" class="s-dark s-anim" d="M508.29,385.55a48.36,48.36,0,0,0,22.31-13.37"/>
-        <path id="lineFace_b_d4" class="s-dark s-anim" d="M261.64,424.81c4.26,8.12,12.54,16.33,17.61,21.92"/>
-        <path id="lineFace_b_d5" class="s-dark s-anim" d="M280.37,420.55s9.54,21.51,40.27,30.89"/>
-        <path id="lineFace_b_d6" class="s-dark s-anim" d="M293.82,462.16s16,11.19,45.77,13"/>
-        <path id="lineFace_b_d7" class="s-dark s-anim" d="M324.39,490s28.59,7.19,47.49,2.68"/>
-        <path id="lineFace_b_d8" class="s-dark s-anim" d="M361.56,513.09s33.84-1.17,57.53-12.92"/>
-        <path id="lineFace_b_d9" class="s-dark s-anim" d="M391.88,525.76s32.43-3.57,53.71-18.68"/>
-        <path id="lineFace_b_d10" class="s-dark s-anim" d="M432.84,536.8s17-5,28.2-14.61"/>
-        <path id="lineFace_b_d11" class="s-dark s-anim" d="M485.64,498.55a73.61,73.61,0,0,1-13.93,14.54"/>
-        <path id="lineFace_b_d12" class="s-dark s-anim" d="M489.88,517.4s-10.18,19.4-21.79,24.81"/>
-        <path id="lineFace_b_m1" class="s-med s-anim" d="M453.75,360.33s0,9.55-4.79,25"/>
-        <path id="lineFace_b_m2" class="s-med s-anim" d="M470.71,360s1.38,22.71-1.08,33.54"/>
-        <path id="lineFace_b_m3" class="s-med s-anim" d="M487.68,354.4c1.07,15.76,2.21,31.45,5.4,46.92"/>
-        <path id="lineFace_b_m4" class="s-med s-anim" d="M314.38,421.55s14.93,10.7,32.38,14.07"/>
-        <path id="lineFace_b_m5" class="s-med s-anim" d="M392.84,432s-13.92,7.45-28.65,6.39"/>
-        <path id="lineFace_b_m6" class="s-med s-anim" d="M436.08,406.54s-13,22.28-30.18,33.81"/>
-        <path id="lineFace_b_m7" class="s-med s-anim" d="M456.5,409.12s-2.4,11.74-11.41,26.5"/>
-        <path id="lineFace_b_m8" class="s-med s-anim" d="M475.91,419.17s.33,1.94-3.42,11.23"/>
-        <path id="lineFace_b_m9" class="s-med s-anim" d="M345.23,455.74s28.9,2.66,44.67-4.3"/>
-        <path id="lineFace_b_m10" class="s-med s-anim" d="M428.57,449.73s-16.71,14.65-34.45,19.15"/>
-        <path id="lineFace_b_m11" class="s-med s-anim" d="M458,443.73s-13,18.39-22,25.15"/>
-        <path id="lineFace_b_m12" class="s-med s-anim" d="M356.56,477s14.88,1.08,21.78-1.84"/>
-        <path id="lineFace_b_m13" class="s-med s-anim" d="M419.67,480.18s-17.38,9.35-29.77,10.1"/>
-        <path id="lineFace_b_m14" class="s-med s-anim" d="M436.08,490.28s22-12.1,32-26.78"/>
-        <path id="lineFace_b_m15" class="s-med s-anim" d="M461,497.17s19.37-8.33,27.84-28.95"/>
-        <path id="lineFace_b_m16" class="s-med s-anim" d="M507.78,470.38s-2.29,22.26-7.35,33.7"/>
-        <path id="lineFace_b_m17" class="s-med s-anim" d="M601.28,335s-3.88,18.34,7.08,44.1"/>
-        <path id="lineFace_b_m18" class="s-med s-anim" d="M618.13,339.46s-3.41,17.26,12.22,44.08"/>
-        <path id="lineFace_b_m19" class="s-med s-anim" d="M633.63,341.89s-.59,16.6,17.43,35.16"/>
-        <path id="lineFace_b_m20" class="s-med s-anim" d="M647.71,338.89s0,6.92,8.42,12.59"/>
-        <path id="lineFace_b_m21" class="s-med s-anim" d="M605.08,461.13s2.41,22.76-2,38.75"/>
-        <path id="lineFace_b_m22" class="s-med s-anim" d="M617.7,443.81a49.19,49.19,0,0,1,5.61,24.41"/>
-        <path id="lineFace_b_m23" class="s-med s-anim" d="M630.35,433.12a33.48,33.48,0,0,1,4.91,12"/>
-        <path id="lineFace_b_h1"  class="s-high s-anim" d="M525,471.22S525.17,507.37,508,538"/>
-        <path id="lineFace_b_h2" class="s-high s-anim" d="M545,482.71s-2,32.42-8.82,51.33"/>
-        <path id="lineFace_b_h3" class="s-high s-anim" d="M566.29,482.7s.37,24.41-6.54,44.08"/>
-        <path id="lineFace_b_h4" class="s-high s-anim" d="M587,468.22s0,28.95-5.49,49.18"/>
+        <path id="lineFace_b_d1" class="s-dark s-anim" d="M503.53,348.21c9.57-2.69,19.35-10.32,23.14-18.1" stroke-dasharray="30.14" stroke-dashoffset="-30.14"/>
+        <path id="lineFace_b_d2" class="s-dark s-anim" d="M505.29,367.56a52.24,52.24,0,0,0,25.08-16.63" stroke-dasharray="30.53" stroke-dashoffset="-30.53"/>
+        <path id="lineFace_b_d3" class="s-dark s-anim" d="M508.29,385.55a48.36,48.36,0,0,0,22.31-13.37" stroke-dasharray="26.33" stroke-dashoffset="-26.33"/>
+        <path id="lineFace_b_d4" class="s-dark s-anim" d="M261.64,424.81c4.26,8.12,12.54,16.33,17.61,21.92" stroke-dasharray="28.20" stroke-dashoffset="-28.20"/>
+        <path id="lineFace_b_d5" class="s-dark s-anim" d="M280.37,420.55s9.54,21.51,40.27,30.89" stroke-dasharray="52.08" stroke-dashoffset="-52.08"/>
+        <path id="lineFace_b_d6" class="s-dark s-anim" d="M293.82,462.16s16,11.19,45.77,13" stroke-dasharray="48.05" stroke-dashoffset="-48.05"/>
+        <path id="lineFace_b_d7" class="s-dark s-anim" d="M324.39,490s28.59,7.19,47.49,2.68" stroke-dasharray="47.93" stroke-dashoffset="-47.93"/>
+        <path id="lineFace_b_d8" class="s-dark s-anim" d="M361.56,513.09s33.84-1.17,57.53-12.92" stroke-dasharray="59.33" stroke-dashoffset="-59.33"/>
+        <path id="lineFace_b_d9" class="s-dark s-anim" d="M391.88,525.76s32.43-3.57,53.71-18.68" stroke-dasharray="57.37" stroke-dashoffset="-57.37"/>
+        <path id="lineFace_b_d10" class="s-dark s-anim" d="M432.84,536.8s17-5,28.2-14.61" stroke-dasharray="31.96" stroke-dashoffset="-31.96"/>
+        <path id="lineFace_b_d11" class="s-dark s-anim" d="M485.64,498.55a73.61,73.61,0,0,1-13.93,14.54" stroke-dasharray="20.20" stroke-dashoffset="20.20"/>
+        <path id="lineFace_b_d12" class="s-dark s-anim" d="M489.88,517.4s-10.18,19.4-21.79,24.81" stroke-dasharray="33.48" stroke-dashoffset="33.48"/>
+        <path id="lineFace_b_m1" class="s-med s-anim" d="M453.75,360.33s0,9.55-4.79,25" stroke-dasharray="25.53" stroke-dashoffset="25.53"/>
+        <path id="lineFace_b_m2" class="s-med s-anim" d="M470.71,360s1.38,22.71-1.08,33.54" stroke-dasharray="33.64" stroke-dashoffset="33.64"/>
+        <path id="lineFace_b_m3" class="s-med s-anim" d="M487.68,354.4c1.07,15.76,2.21,31.45,5.4,46.92" stroke-dasharray="47.27" stroke-dashoffset="47.27"/>
+        <path id="lineFace_b_m4" class="s-med s-anim" d="M314.38,421.55s14.93,10.7,32.38,14.07" stroke-dasharray="35.53" stroke-dashoffset="-35.53"/>
+        <path id="lineFace_b_m5" class="s-med s-anim" d="M392.84,432s-13.92,7.45-28.65,6.39" stroke-dasharray="29.68" stroke-dashoffset="29.68"/>
+        <path id="lineFace_b_m6" class="s-med s-anim" d="M436.08,406.54s-13,22.28-30.18,33.81" stroke-dasharray="45.64" stroke-dashoffset="45.64"/>
+        <path id="lineFace_b_m7" class="s-med s-anim" d="M456.5,409.12s-2.4,11.74-11.41,26.5" stroke-dasharray="28.97" stroke-dashoffset="28.97"/>
+        <path id="lineFace_b_m8" class="s-med s-anim" d="M475.91,419.17s.33,1.94-3.42,11.23" stroke-dasharray="11.79" stroke-dashoffset="11.79"/>
+        <path id="lineFace_b_m9" class="s-med s-anim" d="M345.23,455.74s28.9,2.66,44.67-4.3" stroke-dasharray="45.25" stroke-dashoffset="-45.25"/>
+        <path id="lineFace_b_m10" class="s-med s-anim" d="M428.57,449.73s-16.71,14.65-34.45,19.15" stroke-dasharray="39.72" stroke-dashoffset="39.72"/>
+        <path id="lineFace_b_m11" class="s-med s-anim" d="M458,443.73s-13,18.39-22,25.15" stroke-dasharray="33.51" stroke-dashoffset="33.51"/>
+        <path id="lineFace_b_m12" class="s-med s-anim" d="M356.56,477s14.88,1.08,21.78-1.84" stroke-dasharray="22.00" stroke-dashoffset="-22.00"/>
+        <path id="lineFace_b_m13" class="s-med s-anim" d="M419.67,480.18s-17.38,9.35-29.77,10.1" stroke-dasharray="31.63" stroke-dashoffset="31.63"/>
+        <path id="lineFace_b_m14" class="s-med s-anim" d="M436.08,490.28s22-12.1,32-26.78" stroke-dasharray="42.04" stroke-dashoffset="-42.04"/>
+        <path id="lineFace_b_m15" class="s-med s-anim" d="M461,497.17s19.37-8.33,27.84-28.95" stroke-dasharray="41.05" stroke-dashoffset="-41.05"/>
+        <path id="lineFace_b_m16" class="s-med s-anim" d="M507.78,470.38s-2.29,22.26-7.35,33.7" stroke-dasharray="34.60" stroke-dashoffset="34.60"/>
+        <path id="lineFace_b_m17" class="s-med s-anim" d="M601.28,335s-3.88,18.34,7.08,44.1" stroke-dasharray="45.21" stroke-dashoffset="45.21"/>
+        <path id="lineFace_b_m18" class="s-med s-anim" d="M618.13,339.46s-3.41,17.26,12.22,44.08" stroke-dasharray="46.49" stroke-dashoffset="46.49"/>
+        <path id="lineFace_b_m19" class="s-med s-anim" d="M633.63,341.89s-.59,16.6,17.43,35.16" stroke-dasharray="40.10" stroke-dashoffset="40.10"/>
+        <path id="lineFace_b_m20" class="s-med s-anim" d="M647.71,338.89s0,6.92,8.42,12.59" stroke-dasharray="15.67" stroke-dashoffset="15.67"/>
+        <path id="lineFace_b_m21" class="s-med s-anim" d="M605.08,461.13s2.41,22.76-2,38.75" stroke-dasharray="38.98" stroke-dashoffset="38.98"/>
+        <path id="lineFace_b_m22" class="s-med s-anim" d="M617.7,443.81a49.19,49.19,0,0,1,5.61,24.41" stroke-dasharray="25.33" stroke-dashoffset="25.33"/>
+        <path id="lineFace_b_m23" class="s-med s-anim" d="M630.35,433.12a33.48,33.48,0,0,1,4.91,12" stroke-dasharray="13.05" stroke-dashoffset="13.05"/>
+        <path id="lineFace_b_h1" class="s-high s-anim" d="M525,471.22S525.17,507.37,508,538" stroke-dasharray="69.55" stroke-dashoffset="69.55"/>
+        <path id="lineFace_b_h2" class="s-high s-anim" d="M545,482.71s-2,32.42-8.82,51.33" stroke-dasharray="52.22" stroke-dashoffset="52.22"/>
+        <path id="lineFace_b_h3" class="s-high s-anim" d="M566.29,482.7s.37,24.41-6.54,44.08" stroke-dasharray="44.75" stroke-dashoffset="44.75"/>
+        <path id="lineFace_b_h4" class="s-high s-anim" d="M587,468.22s0,28.95-5.49,49.18" stroke-dasharray="49.60" stroke-dashoffset="49.60"/>
     </g>
 
     <!-- EYES -->
@@ -323,7 +321,7 @@
     </circle>
     <circle class="cls-10" cx="530.04" cy="421.55" r="0">
         <!-- begin="indefinite" for event based start -->
-        <animate id="animate_cir_5" attributeName="r" dur="0.3" begin="0.2" fill="freeze"
+        <animate id="animate_cir_5" attributeName="r" dur="0.3" begin="initNose.begin - 0.6" fill="freeze"
                  values="0; 5.46; 3.26" keyTimes="0;0.7;1" keySplines=".4,0,1,.75; .01,.25,.6,1" calcMode="spline"/>
     </circle>
     <circle class="cls-10" cx="543.16" cy="428.82" r="0">
@@ -367,7 +365,7 @@
     </g>
     <path id="lineNose5_l" class="s-high s-anim" d="M481.23,445.23s27.55,9.12,47.67,5.26c29.35-5.64,41.67-28.16,41.67-28.16" stroke-dasharray="100.12" stroke-dashoffset="100.12"/>
     <path id="lineNose5_r" class="s-high s-anim" d="M570.57,422.33s12,15.77,29.29,19.9" stroke-dasharray="36.01" stroke-dashoffset="-36.01"/>
-    <path class="f-light s-light" stroke-width="4" d="M548.44,226.67s-18-14.1-22.4-5.17c-5.23,10.63,24.08,27.15,24.08,27.15s24.09-22.75,17.22-32.28C561,207.59,548.44,226.67,548.44,226.67Z"/>
+    <path id="lineHeart" class="f-light s-light" stroke-width="4" transform="scale(0)" d="M548.44,226.67s-18-14.1-22.4-5.17c-5.23,10.63,24.08,27.15,24.08,27.15s24.09-22.75,17.22-32.28C561,207.59,548.44,226.67,548.44,226.67Z" style="transform-origin: 547px 231.36px"/>
 
     <!-- dev helper: container for custom anchors -->
     <g id="anchors" class="js-anchor-display">
